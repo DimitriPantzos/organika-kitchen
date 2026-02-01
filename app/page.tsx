@@ -155,11 +155,7 @@ export default function HomePage() {
 
           {/* Center content - Brand */}
           <div className="relative z-10 text-center">
-            <p className="font-script text-2xl text-sage-600 sm:text-3xl">
-              100% Organic
-            </p>
-
-            <h1 className="mt-3 font-heading text-6xl font-extrabold tracking-tight text-charcoal-800 sm:text-7xl lg:text-8xl">
+            <h1 className="font-heading text-6xl font-extrabold tracking-tight text-charcoal-800 sm:text-7xl lg:text-8xl">
               Organika
             </h1>
             <h1 className="font-heading text-6xl font-extrabold tracking-tight text-sage-600 sm:text-7xl lg:text-8xl">
@@ -213,9 +209,6 @@ export default function HomePage() {
             <p className="font-script text-2xl text-berry-500">
               Made fresh daily
             </p>
-            <h2 className="mt-2 text-3xl sm:text-4xl">
-              Our Food Speaks for Itself
-            </h2>
           </div>
           <div className="relative mt-10 grid auto-rows-[180px] grid-cols-2 gap-3 sm:auto-rows-[220px] sm:gap-4 md:grid-cols-4">
             {FOOD_GALLERY.map((photo) => (
