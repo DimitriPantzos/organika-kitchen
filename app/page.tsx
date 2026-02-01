@@ -123,99 +123,81 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero - Warm, Photo-Forward with Doodle Character */}
-      <section className="relative overflow-hidden bg-cream-base">
-        {/* Scattered Doodles - high opacity, lots of personality */}
-        <Avocado className="absolute left-[2%] top-[8%] h-20 w-20 rotate-[-12deg] opacity-30 sm:h-28 sm:w-28 sm:opacity-40" />
-        <Strawberry className="absolute right-[3%] top-[5%] h-16 w-16 rotate-[15deg] opacity-30 sm:h-24 sm:w-24 sm:opacity-40" />
-        <Banana className="absolute left-[5%] bottom-[8%] h-18 w-18 rotate-[-8deg] opacity-25 sm:h-24 sm:w-24 sm:opacity-35" />
-        <Lemon className="absolute right-[8%] bottom-[15%] h-14 w-14 rotate-[-20deg] opacity-25 sm:h-20 sm:w-20 sm:opacity-35" />
-        <Smiley className="absolute left-[15%] bottom-[3%] h-12 w-12 rotate-[8deg] opacity-20 sm:h-16 sm:w-16 sm:opacity-30" />
-        <ChiliPepper className="absolute right-[18%] top-[3%] h-12 w-12 rotate-[30deg] opacity-20 sm:h-16 sm:w-16 sm:opacity-30" />
+      {/* Hero - Botanical Wreath Style (like Le Botaniste) */}
+      <section className="relative overflow-hidden bg-white">
+        <div className="relative mx-auto flex min-h-[85vh] max-w-5xl flex-col items-center justify-center px-4 py-16 sm:py-20">
+          {/* Doodle Wreath - positioned in a circle around center */}
+          {/* Top arc */}
+          <Carrot className="absolute left-[50%] top-[5%] h-16 w-16 -translate-x-1/2 rotate-[180deg] sm:h-24 sm:w-24" />
+          <Beet className="absolute left-[30%] top-[8%] h-14 w-14 rotate-[-30deg] sm:h-20 sm:w-20" />
+          <Mushroom className="absolute left-[70%] top-[8%] h-14 w-14 rotate-[30deg] sm:h-20 sm:w-20" />
+          <Avocado className="absolute left-[15%] top-[15%] h-16 w-16 rotate-[-15deg] sm:h-24 sm:w-24" />
+          <Pineapple className="absolute left-[85%] top-[15%] h-16 w-16 rotate-[15deg] sm:h-24 sm:w-24" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Left - Typography */}
-            <div className="text-center lg:text-left">
-              <p className="font-script text-2xl text-berry-500 sm:text-3xl">
-                plant-based &amp; organic
-              </p>
+          {/* Left side */}
+          <Banana className="absolute left-[5%] top-[30%] h-14 w-14 rotate-[-45deg] sm:h-20 sm:w-20" />
+          <Lemon className="absolute left-[3%] top-[50%] h-12 w-12 rotate-[-20deg] sm:h-18 sm:w-18" />
+          <Strawberry className="absolute left-[5%] top-[70%] h-14 w-14 rotate-[10deg] sm:h-20 sm:w-20" />
 
-              <h1 className="mt-3 text-6xl font-extrabold uppercase leading-[0.9] tracking-tight text-charcoal-900 sm:text-7xl lg:text-8xl">
-                Organika
-                <br />
-                <span className="text-berry-500">Kitchen</span>
-              </h1>
+          {/* Right side */}
+          <OrangeSlice className="absolute right-[5%] top-[30%] h-14 w-14 rotate-[45deg] sm:h-20 sm:w-20" />
+          <ChiliPepper className="absolute right-[3%] top-[50%] h-12 w-12 rotate-[20deg] sm:h-18 sm:w-18" />
+          <Mango className="absolute right-[5%] top-[70%] h-14 w-14 rotate-[-10deg] sm:h-20 sm:w-20" />
 
-              <div className="mt-5 flex items-center justify-center gap-3 lg:justify-start">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal-400 sm:text-sm">
-                  Est. 2016
-                </span>
-                <span className="text-charcoal-300" aria-hidden="true">
-                  &#x2022;
-                </span>
-                <span className="font-script text-lg text-charcoal-500 sm:text-xl">
-                  Southport, CT
-                </span>
-              </div>
+          {/* Bottom arc */}
+          <Onion className="absolute bottom-[15%] left-[15%] h-14 w-14 rotate-[15deg] sm:h-20 sm:w-20" />
+          <Plum className="absolute bottom-[15%] right-[15%] h-14 w-14 rotate-[-15deg] sm:h-20 sm:w-20" />
+          <Smiley className="absolute bottom-[8%] left-[30%] h-12 w-12 rotate-[10deg] sm:h-16 sm:w-16" />
+          <Strawberry className="absolute bottom-[8%] right-[30%] h-12 w-12 rotate-[-10deg] sm:h-16 sm:w-16" />
+          <Avocado className="absolute bottom-[5%] left-[50%] h-14 w-14 -translate-x-1/2 sm:h-20 sm:w-20" />
 
-              <p className="mx-auto mt-6 max-w-md text-lg text-charcoal-400 lg:mx-0">
-                Handcrafted smoothies, plant burgers, acai bowls, and grab-and-go meals.
-                Made with intention since 2016.
-              </p>
+          {/* Center content - Brand card */}
+          <div className="relative z-10 rounded-lg border-2 border-sage-300 bg-cream-white/95 px-8 py-10 text-center shadow-sm backdrop-blur-sm sm:px-16 sm:py-14">
+            <p className="font-script text-xl text-sage-600 sm:text-2xl">
+              100% Organic
+            </p>
 
-              <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-berry-500 text-lg font-bold uppercase tracking-wider text-white hover:bg-berry-400"
-                >
-                  <Link href="/menu">View Menu</Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-charcoal-300 text-lg font-bold uppercase tracking-wider text-charcoal-700 hover:bg-charcoal-50 hover:text-charcoal-900"
-                >
-                  <a
-                    href={LOCATION.orderUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Order Online
-                  </a>
-                </Button>
-              </div>
-            </div>
+            <h1 className="mt-2 font-heading text-5xl font-extrabold tracking-tight text-charcoal-800 sm:text-6xl lg:text-7xl">
+              Organika
+            </h1>
+            <h1 className="font-heading text-5xl font-extrabold tracking-tight text-sage-600 sm:text-6xl lg:text-7xl">
+              Kitchen
+            </h1>
 
-            {/* Right - Photo Collage */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                {HERO_PHOTOS.map((photo, i) => (
-                  <div
-                    key={photo.src}
-                    className={`relative overflow-hidden rounded-2xl shadow-lg ${
-                      i === 0 ? "aspect-square" : i === 1 ? "aspect-[3/4]" : i === 2 ? "aspect-[3/4]" : "aspect-square"
-                    } ${i % 2 === 0 ? "rotate-[-2deg]" : "rotate-[2deg]"}`}
-                  >
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 45vw, 25vw"
-                      priority={i < 2}
-                    />
-                  </div>
-                ))}
-              </div>
-              {/* Doodle accents on the photo grid */}
-              <Carrot className="absolute -left-6 -top-4 h-16 w-16 rotate-[25deg] opacity-60 sm:h-20 sm:w-20" />
-              <OrangeSlice className="absolute -bottom-4 -right-4 h-14 w-14 rotate-[-15deg] opacity-60 sm:h-18 sm:w-18" />
-              <Pineapple className="absolute -right-6 top-1/3 h-14 w-14 rotate-[10deg] opacity-50 sm:h-18 sm:w-18" />
-            </div>
+            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.25em] text-charcoal-400 sm:text-base">
+              Plant-Based Food
+            </p>
           </div>
+
+          {/* CTA buttons below the wreath */}
+          <div className="relative z-10 mt-10 flex flex-wrap justify-center gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-sage-600 text-lg font-bold uppercase tracking-wider text-white hover:bg-sage-500"
+            >
+              <Link href="/menu">View Menu</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-sage-400 text-lg font-bold uppercase tracking-wider text-sage-700 hover:bg-sage-50"
+            >
+              <a
+                href={LOCATION.orderUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order Online
+              </a>
+            </Button>
+          </div>
+
+          {/* Location tagline */}
+          <p className="relative z-10 mt-6 text-sm text-charcoal-400">
+            Southport, CT &bull; Est. 2016
+          </p>
         </div>
       </section>
 
