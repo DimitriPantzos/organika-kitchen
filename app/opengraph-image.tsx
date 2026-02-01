@@ -6,6 +6,10 @@ export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
 export default async function Image() {
+  const poppinsBold = await fetch(
+    new URL("https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDD4Z1JlFd2JQEl8qw.woff2")
+  ).then((res) => res.arrayBuffer())
+
   return new ImageResponse(
     (
       <div
@@ -18,7 +22,7 @@ export default async function Image() {
           height: "100%",
           backgroundColor: "#2E7D32",
           color: "white",
-          fontFamily: "sans-serif",
+          fontFamily: "Poppins",
         }}
       >
         <p
@@ -36,7 +40,7 @@ export default async function Image() {
         <h1
           style={{
             fontSize: 120,
-            fontWeight: 900,
+            fontWeight: 800,
             textTransform: "uppercase",
             lineHeight: 1,
             margin: "20px 0 0 0",
@@ -49,7 +53,7 @@ export default async function Image() {
         <h1
           style={{
             fontSize: 120,
-            fontWeight: 900,
+            fontWeight: 800,
             textTransform: "uppercase",
             lineHeight: 1,
             margin: "0",
@@ -70,7 +74,7 @@ export default async function Image() {
           <span
             style={{
               fontSize: 18,
-              fontWeight: 600,
+              fontWeight: 700,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               color: "#A5D6A7",
@@ -82,7 +86,7 @@ export default async function Image() {
           <span
             style={{
               fontSize: 22,
-              fontStyle: "italic",
+              fontWeight: 700,
               color: "#A5D6A7",
             }}
           >
@@ -91,6 +95,16 @@ export default async function Image() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Poppins",
+          data: poppinsBold,
+          weight: 800,
+          style: "normal",
+        },
+      ],
+    }
   )
 }
