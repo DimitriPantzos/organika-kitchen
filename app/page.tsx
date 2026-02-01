@@ -91,20 +91,20 @@ const FAQ_ITEMS = [
 
 // Photos for the botanical wreath around the hero
 const WREATH_PHOTOS = [
-  { src: "/food/beet-arugula-toast.jpg", alt: "Beet toast", position: "left-[50%] top-[2%] -translate-x-1/2", size: "h-20 w-20 sm:h-28 sm:w-28" },
-  { src: "/food/taco-bowl-radishes.jpg", alt: "Taco bowl", position: "left-[25%] top-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
-  { src: "/food/avocado-toast.jpg", alt: "Avocado toast", position: "left-[75%] top-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
-  { src: "/food/acai-bowls-overhead.jpg", alt: "Acai bowls", position: "left-[10%] top-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
-  { src: "/food/plant-burger-fries.jpg", alt: "Plant burger", position: "right-[10%] top-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
-  { src: "/food/quinoa-bowl.jpg", alt: "Quinoa bowl", position: "left-[2%] top-[35%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
-  { src: "/food/smoothie-bowls-wood.jpg", alt: "Smoothie bowls", position: "right-[2%] top-[35%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
-  { src: "/food/collard-wrap.jpg", alt: "Collard wrap", position: "left-[2%] top-[55%]", size: "h-16 w-16 sm:h-20 sm:w-20" },
-  { src: "/food/juice-ingredients.jpg", alt: "Fresh juice", position: "right-[2%] top-[55%]", size: "h-16 w-16 sm:h-20 sm:w-20" },
-  { src: "/food/chickpea-veggie-soup.jpg", alt: "Veggie soup", position: "left-[10%] bottom-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
-  { src: "/food/cookies.jpg", alt: "Cookies", position: "right-[10%] bottom-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
-  { src: "/food/acai-bowls-group.jpg", alt: "Acai group", position: "left-[25%] bottom-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
-  { src: "/food/plant-burger.jpg", alt: "Plant burger close", position: "right-[25%] bottom-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
-  { src: "/food/taco-bowl.jpg", alt: "Taco bowl", position: "left-[50%] bottom-[2%] -translate-x-1/2", size: "h-20 w-20 sm:h-28 sm:w-28" },
+  { src: "/food/beet-arugula-toast.jpg", alt: "Beet toast", position: "left-[50%] top-[2%] -translate-x-1/2", size: "h-16 w-16 sm:h-28 sm:w-28", animation: "animate-bubble-1", showMobile: true },
+  { src: "/food/taco-bowl-radishes.jpg", alt: "Taco bowl", position: "left-[8%] top-[8%] sm:left-[25%] sm:top-[5%]", size: "h-14 w-14 sm:h-24 sm:w-24", animation: "animate-bubble-2", showMobile: true },
+  { src: "/food/avocado-toast.jpg", alt: "Avocado toast", position: "right-[8%] top-[8%] sm:left-[75%] sm:top-[5%]", size: "h-14 w-14 sm:h-24 sm:w-24", animation: "animate-bubble-3", showMobile: true },
+  { src: "/food/acai-bowls-overhead.jpg", alt: "Acai bowls", position: "left-[10%] top-[15%]", size: "hidden sm:block sm:h-22 sm:w-22", animation: "animate-bubble-4", showMobile: false },
+  { src: "/food/plant-burger-fries.jpg", alt: "Plant burger", position: "right-[10%] top-[15%]", size: "hidden sm:block sm:h-22 sm:w-22", animation: "animate-bubble-1", showMobile: false },
+  { src: "/food/quinoa-bowl.jpg", alt: "Quinoa bowl", position: "left-[2%] top-[25%] sm:top-[35%]", size: "h-14 w-14 sm:h-24 sm:w-24", animation: "animate-bubble-2", showMobile: true },
+  { src: "/food/smoothie-bowls-wood.jpg", alt: "Smoothie bowls", position: "right-[2%] top-[25%] sm:top-[35%]", size: "h-14 w-14 sm:h-24 sm:w-24", animation: "animate-bubble-3", showMobile: true },
+  { src: "/food/collard-wrap.jpg", alt: "Collard wrap", position: "left-[2%] top-[55%]", size: "hidden sm:block sm:h-20 sm:w-20", animation: "animate-bubble-4", showMobile: false },
+  { src: "/food/juice-ingredients.jpg", alt: "Fresh juice", position: "right-[2%] top-[55%]", size: "hidden sm:block sm:h-20 sm:w-20", animation: "animate-bubble-1", showMobile: false },
+  { src: "/food/chickpea-veggie-soup.jpg", alt: "Veggie soup", position: "left-[5%] bottom-[22%] sm:left-[10%] sm:bottom-[15%]", size: "h-14 w-14 sm:h-22 sm:w-22", animation: "animate-bubble-2", showMobile: true },
+  { src: "/food/cookies.jpg", alt: "Cookies", position: "right-[5%] bottom-[22%] sm:right-[10%] sm:bottom-[15%]", size: "h-14 w-14 sm:h-22 sm:w-22", animation: "animate-bubble-3", showMobile: true },
+  { src: "/food/acai-bowls-group.jpg", alt: "Acai group", position: "left-[15%] bottom-[8%] sm:left-[25%] sm:bottom-[5%]", size: "h-14 w-14 sm:h-24 sm:w-24", animation: "animate-bubble-4", showMobile: true },
+  { src: "/food/plant-burger.jpg", alt: "Plant burger close", position: "right-[15%] bottom-[8%] sm:right-[25%] sm:bottom-[5%]", size: "h-14 w-14 sm:h-24 sm:w-24", animation: "animate-bubble-1", showMobile: true },
+  { src: "/food/taco-bowl.jpg", alt: "Taco bowl", position: "left-[50%] bottom-[2%] -translate-x-1/2", size: "h-16 w-16 sm:h-28 sm:w-28", animation: "animate-bubble-2", showMobile: true },
 ]
 
 const FOOD_GALLERY = [
@@ -137,11 +137,11 @@ export default function HomePage() {
       {/* Hero - Botanical Wreath Style with Real Food Photos */}
       <section className="relative overflow-hidden bg-cream-white">
         <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col items-center justify-center px-4 py-20 sm:py-24">
-          {/* Photo Wreath - circular arrangement of real food */}
+          {/* Photo Wreath - circular arrangement of real food with floating animation on mobile */}
           {WREATH_PHOTOS.map((photo, i) => (
             <div
               key={i}
-              className={`absolute ${photo.position} ${photo.size} overflow-hidden rounded-full border-4 border-white shadow-lg`}
+              className={`absolute ${photo.position} ${photo.size} ${photo.animation} overflow-hidden rounded-full border-4 border-white shadow-lg`}
             >
               <Image
                 src={photo.src}
