@@ -155,7 +155,11 @@ export default function HomePage() {
 
           {/* Center content - Brand */}
           <div className="relative z-10 text-center">
-            <h1 className="font-heading text-6xl font-extrabold tracking-tight text-charcoal-800 sm:text-7xl lg:text-8xl">
+            <p className="font-script text-2xl text-sage-600 sm:text-3xl">
+              100% Plant-Based
+            </p>
+
+            <h1 className="mt-2 font-heading text-6xl font-extrabold tracking-tight text-charcoal-800 sm:text-7xl lg:text-8xl">
               Organika
             </h1>
             <h1 className="font-heading text-6xl font-extrabold tracking-tight text-sage-600 sm:text-7xl lg:text-8xl">
@@ -163,7 +167,7 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 text-base font-semibold uppercase tracking-[0.3em] text-charcoal-400 sm:text-lg">
-              Plant-Based Food
+              Southport, CT
             </p>
 
             {/* CTA buttons */}
@@ -191,10 +195,6 @@ export default function HomePage() {
               </Button>
             </div>
 
-            {/* Location tagline */}
-            <p className="mt-6 text-sm text-charcoal-400">
-              Southport, CT &bull; Est. 2016
-            </p>
           </div>
         </div>
       </section>
