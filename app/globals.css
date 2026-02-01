@@ -1,0 +1,309 @@
+/* ============================================
+   ORGANIKA KITCHEN DESIGN SYSTEM
+   "Garden & Cream"
+
+   Fresh, organic, and earthy.
+   Green accents with warm cream surfaces.
+   ============================================ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+
+:root {
+  /* === CREAM - Base Surfaces === */
+  --cream-white: #FEFEF9;
+  --cream-base: #F9F7F0;
+  --cream-raised: #FFFFFF;
+  --cream-elevated: #F2F0E6;
+  --cream-float: #FFFFFF;
+  --cream-hover: #EBE8DD;
+  --cream-muted: #E0DCD0;
+
+  /* === GARDEN - Primary Accent (Organic Green) === */
+  --garden-50: #F4F8EC;
+  --garden-100: #E6F0D3;
+  --garden-200: #CEE2AB;
+  --garden-300: #B0CF7A;
+  --garden-400: #8CB034;
+  --garden-500: #6B8E23;
+  --garden-600: #567219;
+  --garden-700: #435914;
+  --garden-800: #374910;
+  --garden-900: #2D3D0D;
+
+  /* === EARTH - Secondary Accent (Warm Brown) === */
+  --earth-50: #FAF7F4;
+  --earth-100: #F0E9E0;
+  --earth-200: #E1D3C2;
+  --earth-300: #CCB89E;
+  --earth-400: #B59C7B;
+  --earth-500: #9C7F5C;
+  --earth-600: #856A4A;
+  --earth-700: #6B553C;
+  --earth-800: #564432;
+  --earth-900: #3D2B1F;
+
+  /* === BERRY - Tertiary Accent (Smoothie Pink) === */
+  --berry-50: #FDF2F5;
+  --berry-100: #FCE4EB;
+  --berry-200: #F9C9D8;
+  --berry-300: #F4A3BC;
+  --berry-400: #EC7A9C;
+  --berry-500: #D95A7D;
+  --berry-600: #C04466;
+  --berry-700: #A13554;
+  --berry-800: #862D47;
+  --berry-900: #712940;
+
+  /* === TEXT HIERARCHY === */
+  --text-primary: #2D3D0D;
+  --text-secondary: #5F6B4F;
+  --text-tertiary: #8A9478;
+  --text-inverse: #FEFEF9;
+
+  /* === BORDERS & DIVIDERS === */
+  --border-subtle: rgba(45, 61, 13, 0.06);
+  --border-default: rgba(45, 61, 13, 0.1);
+  --border-strong: rgba(45, 61, 13, 0.15);
+  --border-focus: var(--garden-500);
+
+  /* === SEMANTIC COLORS === */
+  --success-base: #059669;
+  --success-muted: rgba(5, 150, 105, 0.1);
+  --warning-base: #D97706;
+  --warning-muted: rgba(217, 119, 6, 0.1);
+  --error-base: #DC2626;
+  --error-muted: rgba(220, 38, 38, 0.1);
+
+  /* === SHADOWS === */
+  --shadow-sm: 0 1px 3px rgba(45, 61, 13, 0.06), 0 1px 2px rgba(45, 61, 13, 0.04);
+  --shadow-md: 0 4px 6px rgba(45, 61, 13, 0.05), 0 2px 4px rgba(45, 61, 13, 0.04);
+  --shadow-lg: 0 10px 15px rgba(45, 61, 13, 0.06), 0 4px 6px rgba(45, 61, 13, 0.04);
+  --shadow-xl: 0 20px 25px rgba(45, 61, 13, 0.08), 0 8px 10px rgba(45, 61, 13, 0.04);
+  --shadow-card: 0 1px 3px rgba(45, 61, 13, 0.08), 0 1px 2px rgba(45, 61, 13, 0.06), 0 0 0 1px rgba(45, 61, 13, 0.04);
+  --shadow-card-hover: 0 8px 16px rgba(45, 61, 13, 0.08), 0 4px 8px rgba(45, 61, 13, 0.04), 0 0 0 1px rgba(107, 142, 35, 0.15);
+
+  /* === RADII === */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* === TRANSITIONS === */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+
+  /* === COMPONENT TOKENS (shadcn/ui mapping) === */
+  --background: var(--cream-base);
+  --foreground: var(--text-primary);
+  --card: var(--cream-raised);
+  --card-foreground: var(--text-primary);
+  --popover: var(--cream-float);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--garden-500);
+  --primary-foreground: var(--text-inverse);
+  --secondary: var(--cream-elevated);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--cream-muted);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--cream-hover);
+  --accent-foreground: var(--text-primary);
+  --destructive: var(--error-base);
+  --destructive-foreground: var(--text-inverse);
+  --border: var(--border-default);
+  --input: var(--border-default);
+  --ring: var(--garden-500);
+  --radius: var(--radius-lg);
+
+  --chart-1: var(--garden-500);
+  --chart-2: var(--earth-500);
+  --chart-3: var(--berry-500);
+  --chart-4: var(--warning-base);
+  --chart-5: #2563EB;
+}
+
+/* ============================================
+   TAILWIND THEME MAPPING
+   ============================================ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-cream-white: var(--cream-white);
+  --color-cream-base: var(--cream-base);
+  --color-cream-raised: var(--cream-raised);
+  --color-cream-elevated: var(--cream-elevated);
+  --color-cream-hover: var(--cream-hover);
+  --color-cream-muted: var(--cream-muted);
+
+  --color-garden-50: var(--garden-50);
+  --color-garden-100: var(--garden-100);
+  --color-garden-200: var(--garden-200);
+  --color-garden-300: var(--garden-300);
+  --color-garden-400: var(--garden-400);
+  --color-garden-500: var(--garden-500);
+  --color-garden-600: var(--garden-600);
+  --color-garden-700: var(--garden-700);
+  --color-garden-800: var(--garden-800);
+  --color-garden-900: var(--garden-900);
+
+  --color-earth-50: var(--earth-50);
+  --color-earth-100: var(--earth-100);
+  --color-earth-200: var(--earth-200);
+  --color-earth-300: var(--earth-300);
+  --color-earth-400: var(--earth-400);
+  --color-earth-500: var(--earth-500);
+  --color-earth-600: var(--earth-600);
+  --color-earth-700: var(--earth-700);
+  --color-earth-800: var(--earth-800);
+  --color-earth-900: var(--earth-900);
+
+  --color-berry-50: var(--berry-50);
+  --color-berry-100: var(--berry-100);
+  --color-berry-200: var(--berry-200);
+  --color-berry-300: var(--berry-300);
+  --color-berry-400: var(--berry-400);
+  --color-berry-500: var(--berry-500);
+  --color-berry-600: var(--berry-600);
+  --color-berry-700: var(--berry-700);
+  --color-berry-800: var(--berry-800);
+  --color-berry-900: var(--berry-900);
+
+  --color-success: var(--success-base);
+  --color-warning: var(--warning-base);
+  --color-error: var(--error-base);
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+@layer base {
+  * {
+    @apply border-border;
+    outline-color: var(--ring);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.006em;
+    font-weight: 400;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: rgba(107, 142, 35, 0.15);
+    color: var(--text-primary);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up var(--duration-normal) var(--ease-smooth) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in var(--duration-normal) var(--ease-smooth) forwards;
+}
+
+/* ============================================
+   COMPONENT PATTERNS
+   ============================================ */
+
+.card-interactive {
+  transition:
+    transform var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
