@@ -1,14 +1,15 @@
 import { ImageResponse } from "next/og"
+import { readFile } from "node:fs/promises"
+import { join } from "node:path"
 
-export const runtime = "edge"
 export const alt = "Organika Kitchen - Plant-Based & Organic Restaurant in Southport, CT"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
 export default async function Image() {
-  const poppinsBold = await fetch(
-    new URL("https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLDD4Z1JlFd2JQEl8qw.woff2")
-  ).then((res) => res.arrayBuffer())
+  const fontData = await readFile(
+    join(process.cwd(), "app/fonts/Poppins-ExtraBold.ttf")
+  )
 
   return new ImageResponse(
     (
@@ -28,7 +29,7 @@ export default async function Image() {
         <p
           style={{
             fontSize: 20,
-            fontWeight: 700,
+            fontWeight: 800,
             letterSpacing: "0.3em",
             textTransform: "uppercase",
             color: "#A5D6A7",
@@ -74,7 +75,7 @@ export default async function Image() {
           <span
             style={{
               fontSize: 18,
-              fontWeight: 700,
+              fontWeight: 800,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
               color: "#A5D6A7",
@@ -86,7 +87,7 @@ export default async function Image() {
           <span
             style={{
               fontSize: 22,
-              fontWeight: 700,
+              fontWeight: 800,
               color: "#A5D6A7",
             }}
           >
@@ -100,7 +101,7 @@ export default async function Image() {
       fonts: [
         {
           name: "Poppins",
-          data: poppinsBold,
+          data: fontData,
           weight: 800,
           style: "normal",
         },
