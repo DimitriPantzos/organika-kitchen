@@ -18,7 +18,7 @@ export default function OrderPage() {
     <>
       <BreadcrumbSchema items={[{ name: "Order for Pickup", href: "/order" }]} />
 
-      <section className="bg-garden-900 py-16 sm:py-20">
+      <section className="bg-garden-700 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl text-white sm:text-5xl">Order for Pickup</h1>
           <p className="mt-4 max-w-xl text-lg text-white/70">
@@ -31,7 +31,8 @@ export default function OrderPage() {
       <section className="section-padding">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
           <div className="rounded-xl border border-border bg-card p-8 sm:p-12">
-            <h2 className="text-2xl sm:text-3xl">Southport</h2>
+            <p className="font-script text-xl text-garden-600">Southport, CT</p>
+            <h2 className="mt-1 text-2xl sm:text-3xl">Our Menu</h2>
             <p className="mt-2 text-muted-foreground">
               {LOCATION.address}, {LOCATION.city}, {LOCATION.state}{" "}
               {LOCATION.zip}
@@ -43,7 +44,7 @@ export default function OrderPage() {
             <Button
               asChild
               size="lg"
-              className="mt-8 bg-garden-500 text-lg hover:bg-garden-600"
+              className="mt-8 bg-garden-600 text-lg hover:bg-garden-700"
             >
               <a
                 href={LOCATION.orderUrl}
@@ -64,7 +65,7 @@ export default function OrderPage() {
             Prefer to call?{" "}
             <a
               href={`tel:${LOCATION.phone}`}
-              className="font-medium text-garden-500 hover:text-garden-600"
+              className="font-medium text-garden-600 hover:text-garden-700"
             >
               {LOCATION.phoneFormatted}
             </a>

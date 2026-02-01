@@ -103,7 +103,7 @@ export function CateringForm() {
         type="submit"
         disabled={pending}
         size="lg"
-        className="w-full bg-garden-500 hover:bg-garden-600"
+        className="w-full bg-garden-600 hover:bg-garden-700"
       >
         {pending ? "Submitting..." : "Submit Inquiry"}
       </Button>

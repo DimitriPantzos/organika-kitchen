@@ -18,12 +18,12 @@ export function CTABanner({
 }: CTABannerProps) {
   const bgClass =
     variant === "garden"
-      ? "bg-garden-900 text-white"
-      : "bg-earth-50 text-foreground"
+      ? "bg-garden-800 text-white"
+      : "bg-cream-elevated text-foreground"
 
   const btnClass =
     variant === "garden"
-      ? "bg-white text-garden-900 hover:bg-white/90"
+      ? "bg-white text-garden-800 hover:bg-white/90"
       : "bg-garden-600 text-white hover:bg-garden-700"
 
   return (

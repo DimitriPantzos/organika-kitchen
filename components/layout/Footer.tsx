@@ -7,18 +7,21 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border bg-cream-elevated">
+    <footer className="bg-garden-800 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block">
-              <span className="text-xl font-bold tracking-tight text-garden-600">
-                {BRAND.name.toUpperCase()}
+              <span className="text-xl font-extrabold uppercase tracking-wider text-white font-heading">
+                {BRAND.name}
               </span>
             </Link>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-1 font-script text-lg text-garden-300">
+              Southport, CT
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-white/60">
               {BRAND.description}
             </p>
             <div className="mt-4 flex items-center gap-4">
@@ -26,7 +29,7 @@ export function Footer() {
                 href={SOCIAL.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-garden-500"
+                className="inline-flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white"
               >
                 <Instagram className="h-4 w-4" />
                 {SOCIAL.instagramHandle}
@@ -35,7 +38,7 @@ export function Footer() {
                 href={SOCIAL.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-muted-foreground hover:text-garden-500"
+                className="inline-flex items-center text-white/60 hover:text-white"
               >
                 <Facebook className="h-4 w-4" />
               </a>
@@ -44,17 +47,17 @@ export function Footer() {
 
           {/* Location */}
           <div>
-            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-foreground">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-garden-300 font-heading">
               {LOCATION.name}
             </h3>
-            <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
+            <ul className="mt-3 space-y-2.5 text-sm text-white/60">
               <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-garden-400" />
                 <a
                   href={LOCATION.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-foreground"
+                  className="hover:text-white"
                 >
                   {LOCATION.address}
                   <br />
@@ -62,16 +65,16 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0" />
+                <Phone className="h-4 w-4 shrink-0 text-garden-400" />
                 <a
                   href={`tel:${LOCATION.phone}`}
-                  className="hover:text-foreground"
+                  className="hover:text-white"
                 >
                   {LOCATION.phoneFormatted}
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <Clock className="mt-0.5 h-4 w-4 shrink-0" />
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-garden-400" />
                 <span>
                   Mon&ndash;Sat: {LOCATION.hours[0].open} - {LOCATION.hours[0].close}
                   <br />
@@ -83,7 +86,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-foreground">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-garden-300 font-heading">
               Quick Links
             </h3>
             <ul className="mt-3 space-y-2 text-sm">
@@ -92,18 +95,18 @@ export function Footer() {
                   href={LOCATION.orderUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground"
+                  className="text-white/60 hover:text-white"
                 >
-                  Order for Pickup
+                  Order Online
                 </a>
               </li>
               <li>
-                <Link href="/catering" className="text-muted-foreground hover:text-foreground">
+                <Link href="/catering" className="text-white/60 hover:text-white">
                   Catering
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground">
+                <Link href="/contact" className="text-white/60 hover:text-white">
                   Contact Us
                 </Link>
               </li>
@@ -111,15 +114,15 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator />
+        <Separator className="bg-white/10" />
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-2 py-6 sm:flex-row">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-white/40">
             &copy; {currentYear} {BRAND.name}. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground">
-            {BRAND.tagline} &bull; {LOCATION.city}, {LOCATION.state}
+          <p className="text-xs text-white/40">
+            Plant-Based &bull; Organic &bull; Est. 2016
           </p>
         </div>
       </div>

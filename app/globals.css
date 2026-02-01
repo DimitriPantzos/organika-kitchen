@@ -1,9 +1,9 @@
 /* ============================================
    ORGANIKA KITCHEN DESIGN SYSTEM
-   "Garden & Cream"
+   Brand Identity by Liisa Studio LLC
 
-   Fresh, organic, and earthy.
-   Green accents with warm cream surfaces.
+   Fresh, colorful, and organic.
+   Vibrant green with playful accent colors.
    ============================================ */
 
 @import "tailwindcss";
@@ -17,27 +17,27 @@
 
 :root {
   /* === CREAM - Base Surfaces === */
-  --cream-white: #FEFEF9;
+  --cream-white: #FEFDF8;
   --cream-base: #F9F7F0;
   --cream-raised: #FFFFFF;
-  --cream-elevated: #F2F0E6;
+  --cream-elevated: #F3F0E7;
   --cream-float: #FFFFFF;
   --cream-hover: #EBE8DD;
   --cream-muted: #E0DCD0;
 
-  /* === GARDEN - Primary Accent (Organic Green) === */
-  --garden-50: #F4F8EC;
-  --garden-100: #E6F0D3;
-  --garden-200: #CEE2AB;
-  --garden-300: #B0CF7A;
-  --garden-400: #8CB034;
-  --garden-500: #6B8E23;
-  --garden-600: #567219;
-  --garden-700: #435914;
-  --garden-800: #374910;
-  --garden-900: #2D3D0D;
+  /* === GARDEN - Primary Brand Green === */
+  --garden-50: #E8F5E9;
+  --garden-100: #C8E6C9;
+  --garden-200: #A5D6A7;
+  --garden-300: #81C784;
+  --garden-400: #66BB6A;
+  --garden-500: #43A047;
+  --garden-600: #388E3C;
+  --garden-700: #2E7D32;
+  --garden-800: #1B5E20;
+  --garden-900: #0D3B0F;
 
-  /* === EARTH - Secondary Accent (Warm Brown) === */
+  /* === EARTH - Warm Brown === */
   --earth-50: #FAF7F4;
   --earth-100: #F0E9E0;
   --earth-200: #E1D3C2;
@@ -49,45 +49,73 @@
   --earth-800: #564432;
   --earth-900: #3D2B1F;
 
-  /* === BERRY - Tertiary Accent (Smoothie Pink) === */
-  --berry-50: #FDF2F5;
-  --berry-100: #FCE4EB;
-  --berry-200: #F9C9D8;
-  --berry-300: #F4A3BC;
-  --berry-400: #EC7A9C;
-  --berry-500: #D95A7D;
-  --berry-600: #C04466;
-  --berry-700: #A13554;
-  --berry-800: #862D47;
-  --berry-900: #712940;
+  /* === SUNRISE - Orange Accent === */
+  --sunrise-50: #FFF3E0;
+  --sunrise-100: #FFE0B2;
+  --sunrise-200: #FFCC80;
+  --sunrise-300: #FFB74D;
+  --sunrise-400: #FFA726;
+  --sunrise-500: #FF8F00;
+
+  /* === BERRY - Pink/Magenta Accent === */
+  --berry-50: #FCE4EC;
+  --berry-100: #F8BBD0;
+  --berry-200: #F48FB1;
+  --berry-300: #F06292;
+  --berry-400: #EC407A;
+  --berry-500: #E91E63;
+
+  /* === SUNSHINE - Yellow Accent === */
+  --sunshine-50: #FFFDE7;
+  --sunshine-100: #FFF9C4;
+  --sunshine-200: #FFF59D;
+  --sunshine-300: #FFF176;
+  --sunshine-400: #FFEE58;
+  --sunshine-500: #FDD835;
+
+  /* === OCEAN - Blue Accent === */
+  --ocean-50: #E3F2FD;
+  --ocean-100: #BBDEFB;
+  --ocean-200: #90CAF9;
+  --ocean-300: #64B5F6;
+  --ocean-400: #42A5F5;
+  --ocean-500: #2196F3;
+
+  /* === CHILI - Red Accent === */
+  --chili-50: #FFEBEE;
+  --chili-100: #FFCDD2;
+  --chili-200: #EF9A9A;
+  --chili-300: #E57373;
+  --chili-400: #EF5350;
+  --chili-500: #E53935;
 
   /* === TEXT HIERARCHY === */
-  --text-primary: #2D3D0D;
-  --text-secondary: #5F6B4F;
-  --text-tertiary: #8A9478;
-  --text-inverse: #FEFEF9;
+  --text-primary: #1B3A1B;
+  --text-secondary: #4A6B4A;
+  --text-tertiary: #7A9A7A;
+  --text-inverse: #FEFDF8;
 
   /* === BORDERS & DIVIDERS === */
-  --border-subtle: rgba(45, 61, 13, 0.06);
-  --border-default: rgba(45, 61, 13, 0.1);
-  --border-strong: rgba(45, 61, 13, 0.15);
+  --border-subtle: rgba(27, 58, 27, 0.06);
+  --border-default: rgba(27, 58, 27, 0.1);
+  --border-strong: rgba(27, 58, 27, 0.15);
   --border-focus: var(--garden-500);
 
   /* === SEMANTIC COLORS === */
-  --success-base: #059669;
-  --success-muted: rgba(5, 150, 105, 0.1);
-  --warning-base: #D97706;
-  --warning-muted: rgba(217, 119, 6, 0.1);
-  --error-base: #DC2626;
-  --error-muted: rgba(220, 38, 38, 0.1);
+  --success-base: #2E7D32;
+  --success-muted: rgba(46, 125, 50, 0.1);
+  --warning-base: #FF8F00;
+  --warning-muted: rgba(255, 143, 0, 0.1);
+  --error-base: #E53935;
+  --error-muted: rgba(229, 57, 53, 0.1);
 
   /* === SHADOWS === */
-  --shadow-sm: 0 1px 3px rgba(45, 61, 13, 0.06), 0 1px 2px rgba(45, 61, 13, 0.04);
-  --shadow-md: 0 4px 6px rgba(45, 61, 13, 0.05), 0 2px 4px rgba(45, 61, 13, 0.04);
-  --shadow-lg: 0 10px 15px rgba(45, 61, 13, 0.06), 0 4px 6px rgba(45, 61, 13, 0.04);
-  --shadow-xl: 0 20px 25px rgba(45, 61, 13, 0.08), 0 8px 10px rgba(45, 61, 13, 0.04);
-  --shadow-card: 0 1px 3px rgba(45, 61, 13, 0.08), 0 1px 2px rgba(45, 61, 13, 0.06), 0 0 0 1px rgba(45, 61, 13, 0.04);
-  --shadow-card-hover: 0 8px 16px rgba(45, 61, 13, 0.08), 0 4px 8px rgba(45, 61, 13, 0.04), 0 0 0 1px rgba(107, 142, 35, 0.15);
+  --shadow-sm: 0 1px 3px rgba(27, 58, 27, 0.06), 0 1px 2px rgba(27, 58, 27, 0.04);
+  --shadow-md: 0 4px 6px rgba(27, 58, 27, 0.05), 0 2px 4px rgba(27, 58, 27, 0.04);
+  --shadow-lg: 0 10px 15px rgba(27, 58, 27, 0.06), 0 4px 6px rgba(27, 58, 27, 0.04);
+  --shadow-xl: 0 20px 25px rgba(27, 58, 27, 0.08), 0 8px 10px rgba(27, 58, 27, 0.04);
+  --shadow-card: 0 1px 3px rgba(27, 58, 27, 0.08), 0 1px 2px rgba(27, 58, 27, 0.06), 0 0 0 1px rgba(27, 58, 27, 0.04);
+  --shadow-card-hover: 0 8px 16px rgba(27, 58, 27, 0.08), 0 4px 8px rgba(27, 58, 27, 0.04), 0 0 0 1px rgba(67, 160, 71, 0.15);
 
   /* === RADII === */
   --radius-sm: 6px;
@@ -102,14 +130,14 @@
   --duration-fast: 150ms;
   --duration-normal: 250ms;
 
-  /* === COMPONENT TOKENS (shadcn/ui mapping) === */
+  /* === COMPONENT TOKENS (shadcn/ui) === */
   --background: var(--cream-base);
   --foreground: var(--text-primary);
   --card: var(--cream-raised);
   --card-foreground: var(--text-primary);
   --popover: var(--cream-float);
   --popover-foreground: var(--text-primary);
-  --primary: var(--garden-500);
+  --primary: var(--garden-600);
   --primary-foreground: var(--text-inverse);
   --secondary: var(--cream-elevated);
   --secondary-foreground: var(--text-primary);
@@ -125,10 +153,10 @@
   --radius: var(--radius-lg);
 
   --chart-1: var(--garden-500);
-  --chart-2: var(--earth-500);
+  --chart-2: var(--sunrise-500);
   --chart-3: var(--berry-500);
-  --chart-4: var(--warning-base);
-  --chart-5: #2563EB;
+  --chart-4: var(--ocean-500);
+  --chart-5: var(--chili-500);
 }
 
 /* ============================================
@@ -185,23 +213,48 @@
   --color-earth-800: var(--earth-800);
   --color-earth-900: var(--earth-900);
 
+  --color-sunrise-50: var(--sunrise-50);
+  --color-sunrise-100: var(--sunrise-100);
+  --color-sunrise-200: var(--sunrise-200);
+  --color-sunrise-300: var(--sunrise-300);
+  --color-sunrise-400: var(--sunrise-400);
+  --color-sunrise-500: var(--sunrise-500);
+
   --color-berry-50: var(--berry-50);
   --color-berry-100: var(--berry-100);
   --color-berry-200: var(--berry-200);
   --color-berry-300: var(--berry-300);
   --color-berry-400: var(--berry-400);
   --color-berry-500: var(--berry-500);
-  --color-berry-600: var(--berry-600);
-  --color-berry-700: var(--berry-700);
-  --color-berry-800: var(--berry-800);
-  --color-berry-900: var(--berry-900);
+
+  --color-sunshine-50: var(--sunshine-50);
+  --color-sunshine-100: var(--sunshine-100);
+  --color-sunshine-200: var(--sunshine-200);
+  --color-sunshine-300: var(--sunshine-300);
+  --color-sunshine-400: var(--sunshine-400);
+  --color-sunshine-500: var(--sunshine-500);
+
+  --color-ocean-50: var(--ocean-50);
+  --color-ocean-100: var(--ocean-100);
+  --color-ocean-200: var(--ocean-200);
+  --color-ocean-300: var(--ocean-300);
+  --color-ocean-400: var(--ocean-400);
+  --color-ocean-500: var(--ocean-500);
+
+  --color-chili-50: var(--chili-50);
+  --color-chili-100: var(--chili-100);
+  --color-chili-200: var(--chili-200);
+  --color-chili-300: var(--chili-300);
+  --color-chili-400: var(--chili-400);
+  --color-chili-500: var(--chili-500);
 
   --color-success: var(--success-base);
   --color-warning: var(--warning-base);
   --color-error: var(--error-base);
 
+  --font-heading: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-script: 'Caveat', cursive;
 
   --radius-sm: 6px;
   --radius-md: 8px;
@@ -242,13 +295,13 @@
   }
 
   ::selection {
-    background: rgba(107, 142, 35, 0.15);
+    background: rgba(67, 160, 71, 0.15);
     color: var(--text-primary);
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-serif);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 700;
     letter-spacing: -0.02em;
   }
 }
@@ -273,12 +326,30 @@
   to { opacity: 1; }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up var(--duration-normal) var(--ease-smooth) forwards;
 }
 
 .animate-fade-in {
   animation: fade-in var(--duration-normal) var(--ease-smooth) forwards;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
 /* ============================================

@@ -2,7 +2,9 @@ import Link from "next/link"
 import { Leaf, Sprout, Heart, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CTABanner } from "@/components/sections/CTABanner"
-import { LOCATION, BRAND } from "@/lib/locations"
+import { TaglineMarquee } from "@/components/brand/TaglineMarquee"
+import { MenuCategories } from "@/components/brand/MenuCategories"
+import { LOCATION } from "@/lib/locations"
 import {
   Accordion,
   AccordionContent,
@@ -15,24 +17,28 @@ const DIFFERENTIATORS = [
   {
     icon: Leaf,
     title: "100% Plant-Based",
+    color: "bg-garden-500",
     description:
       "Every item on our menu is entirely plant-based. No refined sugars, no processed oils -- just wholesome, natural ingredients.",
   },
   {
     icon: Sprout,
     title: "Certified Organic",
+    color: "bg-sunrise-500",
     description:
       "We source organic, locally-grown produce whenever possible. From our house-made dressings to our baked goods, quality is non-negotiable.",
   },
   {
     icon: Heart,
-    title: "Made with Intention",
+    title: "Made with Love",
+    color: "bg-berry-400",
     description:
       "Handcrafted smoothies, plant burgers, acai bowls, and grab-and-go meals prepared fresh daily with care and purpose.",
   },
   {
     icon: Clock,
     title: "Grab & Go Ready",
+    color: "bg-ocean-500",
     description:
       "Busy day? Our extensive grab-and-go selection has you covered with overnight oats, fresh juices, salads, and ready-to-eat meals.",
   },
@@ -47,7 +53,7 @@ const FAQ_ITEMS = [
   {
     question: "Do you offer online ordering?",
     answer:
-      "Yes! You can order online through our website for pickup. Click 'Order for Pickup' to place your order through Toast.",
+      "Yes! You can order online through our website for pickup. Click 'Order Online' to place your order through Toast.",
   },
   {
     question: "Do you do catering?",
@@ -84,62 +90,78 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-garden-900">
-        <div className="absolute inset-0 bg-gradient-to-r from-garden-900/95 via-garden-900/80 to-garden-900/60" />
-        <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-garden-300">
-              {BRAND.tagline}
-            </p>
-            <h1 className="mt-4 text-5xl leading-[1.1] text-white sm:text-6xl lg:text-7xl">
-              Pure Food,
-              <br />
-              <span className="text-garden-300">Plant</span> Powered
-            </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/70">
-              Organic, plant-based meals crafted with intention. Smoothies,
-              bowls, plant burgers, baked goods, and grab-and-go goodness in
-              Southport, CT.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-garden-500 text-lg hover:bg-garden-400"
+      {/* Hero - Brand Presentation */}
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-garden-700">
+        {/* Subtle radial gradient for depth */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(102,187,106,0.15),transparent_70%)]" />
+
+        {/* Decorative accent circles */}
+        <div className="absolute left-[10%] top-[15%] h-32 w-32 rounded-full bg-garden-600/20 blur-xl sm:h-48 sm:w-48" />
+        <div className="absolute bottom-[20%] right-[8%] h-24 w-24 rounded-full bg-sunrise-500/10 blur-xl sm:h-36 sm:w-36" />
+        <div className="absolute bottom-[10%] left-[20%] h-20 w-20 rounded-full bg-berry-400/10 blur-xl sm:h-28 sm:w-28" />
+
+        <div className="relative z-10 px-4 py-20 text-center sm:px-6">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-garden-200 sm:text-sm">
+            Plant Based &amp; Organic
+          </p>
+
+          <h1 className="mt-6 text-6xl font-extrabold uppercase leading-none tracking-tight text-white sm:text-7xl lg:text-9xl">
+            Organika
+            <br />
+            Kitchen
+          </h1>
+
+          <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-garden-200 sm:text-sm">
+              Est. 2016
+            </span>
+            <span className="text-garden-400" aria-hidden="true">
+              &#x2022;
+            </span>
+            <span className="font-script text-lg text-garden-200 sm:text-xl">
+              Southport, CT
+            </span>
+          </div>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-lg font-bold uppercase tracking-wider text-garden-700 hover:bg-white/90"
+            >
+              <Link href="/order">View Menu</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/30 bg-transparent text-lg font-bold uppercase tracking-wider text-white hover:bg-white/10 hover:text-white"
+            >
+              <a
+                href={LOCATION.orderUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Link href="/order">Order for Pickup</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/30 bg-transparent text-lg text-white hover:bg-white/10 hover:text-white"
-              >
-                <Link href="/contact">Visit Us</Link>
-              </Button>
-            </div>
+                Order Online
+              </a>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Quote Banner */}
-      <section className="border-y border-border bg-cream-elevated py-12">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <blockquote className="text-2xl italic text-garden-700 sm:text-3xl">
-            &ldquo;Let food be thy medicine and medicine be thy food&rdquo;
-          </blockquote>
-          <cite className="mt-3 block text-sm font-medium not-italic text-muted-foreground">
-            &mdash; Hippocrates
-          </cite>
-        </div>
-      </section>
+      {/* Scrolling Tagline Marquee */}
+      <TaglineMarquee />
 
-      {/* What Makes Us Different */}
+      {/* Because We Kale */}
       <section className="section-padding bg-cream-elevated">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl">Because We Kale</h2>
+            <p className="font-script text-2xl text-garden-600">
+              Because We Kale
+            </p>
+            <h2 className="mt-2 text-3xl sm:text-4xl">
+              What Makes Us Different
+            </h2>
             <p className="mt-3 text-lg text-muted-foreground">
               Pure, organic, plant-based goodness since 2016
             </p>
@@ -147,10 +169,12 @@ export default function HomePage() {
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {DIFFERENTIATORS.map((item) => (
               <div key={item.title} className="text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-garden-50">
-                  <item.icon className="h-7 w-7 text-garden-500" />
+                <div
+                  className={`mx-auto flex h-14 w-14 items-center justify-center rounded-full ${item.color} shadow-sm`}
+                >
+                  <item.icon className="h-7 w-7 text-white" />
                 </div>
-                <h3 className="mt-4 font-sans text-lg font-semibold text-foreground">
+                <h3 className="mt-4 font-heading text-lg font-semibold text-foreground">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -162,18 +186,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Menu Categories */}
+      <MenuCategories />
+
+      {/* Quote Banner */}
+      <section className="bg-garden-600 py-12">
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="font-script text-3xl text-white sm:text-4xl">
+            &ldquo;Don&rsquo;t panic, it&rsquo;s organic&rdquo;
+          </p>
+        </div>
+      </section>
+
       {/* Location Info */}
       <section className="section-padding">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl">Come Visit Us</h2>
+              <p className="font-script text-xl text-garden-600">Come visit</p>
+              <h2 className="mt-1 text-3xl sm:text-4xl">Our Location</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Located on Post Road in Southport, we&apos;re your neighborhood
                 destination for clean, plant-based eating.
               </p>
               <div className="mt-6 space-y-3 text-muted-foreground">
-                <p className="font-sans font-semibold text-foreground">
+                <p className="font-heading font-semibold text-foreground">
                   {LOCATION.address}
                   <br />
                   {LOCATION.city}, {LOCATION.state} {LOCATION.zip}
@@ -181,7 +218,7 @@ export default function HomePage() {
                 <p>
                   <a
                     href={`tel:${LOCATION.phone}`}
-                    className="font-semibold text-garden-500 hover:text-garden-600"
+                    className="font-semibold text-garden-600 hover:text-garden-700"
                   >
                     {LOCATION.phoneFormatted}
                   </a>
@@ -189,7 +226,7 @@ export default function HomePage() {
                 <p>Mon&ndash;Sat 8:00 AM &ndash; 6:00 PM | Sun 8:00 AM &ndash; 5:00 PM</p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button asChild className="bg-garden-500 hover:bg-garden-600">
+                <Button asChild className="bg-garden-600 hover:bg-garden-700">
                   <Link href="/order">Order for Pickup</Link>
                 </Button>
                 <Button asChild variant="outline">
@@ -237,7 +274,7 @@ export default function HomePage() {
           <Accordion type="single" collapsible className="mt-8">
             {FAQ_ITEMS.map((item, i) => (
               <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger className="text-left font-sans text-base font-medium">
+                <AccordionTrigger className="text-left font-heading text-base font-medium">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Plus_Jakarta_Sans, Instrument_Serif } from "next/font/google"
+import { Poppins, Plus_Jakarta_Sans, Caveat } from "next/font/google"
 import { Toaster } from "sonner"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
@@ -7,16 +7,23 @@ import { JsonLd } from "@/components/seo/JsonLd"
 import { BRAND, SOCIAL } from "@/lib/locations"
 import "./globals.css"
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-heading",
+  display: "swap",
+})
+
 const jakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 })
 
-const instrumentSerif = Instrument_Serif({
+const caveat = Caveat({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-serif",
+  weight: ["400", "700"],
+  variable: "--font-script",
   display: "swap",
 })
 
@@ -76,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${jakartaSans.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${jakartaSans.variable} ${caveat.variable}`}>
       <body className="min-h-screen antialiased">
         <JsonLd
           data={{

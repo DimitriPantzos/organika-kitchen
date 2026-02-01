@@ -19,6 +19,7 @@ const PACKAGES = [
     icon: Users,
     name: "Small Gatherings",
     capacity: "10-20 guests",
+    color: "bg-garden-500",
     description:
       "Perfect for team wellness events, birthday celebrations, and intimate gatherings. Curated plant-based platters and smoothie trays.",
   },
@@ -26,6 +27,7 @@ const PACKAGES = [
     icon: PartyPopper,
     name: "Medium Events",
     capacity: "20-50 guests",
+    color: "bg-sunrise-500",
     description:
       "Ideal for office parties, holiday gatherings, and celebrations. Customizable plant-based menu with bowls, burgers, and baked goods.",
   },
@@ -33,6 +35,7 @@ const PACKAGES = [
     icon: Building2,
     name: "Large Events",
     capacity: "50+ guests",
+    color: "bg-berry-400",
     description:
       "Full-service plant-based catering for large events and corporate functions. Dedicated setup and service available.",
   },
@@ -40,6 +43,7 @@ const PACKAGES = [
     icon: Utensils,
     name: "Corporate & Recurring",
     capacity: "Any size",
+    color: "bg-ocean-500",
     description:
       "Weekly office wellness lunches, monthly team events, or recurring healthy catering. Special pricing for ongoing partnerships.",
   },
@@ -51,10 +55,10 @@ export default function CateringPage() {
       <BreadcrumbSchema items={[{ name: "Catering", href: "/catering" }]} />
 
       {/* Hero */}
-      <section className="bg-garden-900 py-16 sm:py-20">
+      <section className="bg-garden-700 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-garden-300">
+            <p className="text-sm font-semibold uppercase tracking-widest text-garden-200">
               Catering
             </p>
             <h1 className="mt-3 text-4xl text-white sm:text-5xl">
@@ -81,13 +85,15 @@ export default function CateringPage() {
             {PACKAGES.map((pkg) => (
               <Card key={pkg.name} className="border-border/50">
                 <CardHeader>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-garden-50">
-                    <pkg.icon className="h-6 w-6 text-garden-500" />
+                  <div
+                    className={`flex h-12 w-12 items-center justify-center rounded-lg ${pkg.color} shadow-sm`}
+                  >
+                    <pkg.icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="font-sans text-lg font-semibold">
+                  <CardTitle className="font-heading text-lg font-semibold">
                     {pkg.name}
                   </CardTitle>
-                  <p className="text-sm font-medium text-garden-500">
+                  <p className="text-sm font-medium text-garden-600">
                     {pkg.capacity}
                   </p>
                 </CardHeader>
@@ -106,7 +112,7 @@ export default function CateringPage() {
           <h2 className="text-center text-2xl sm:text-3xl">What&apos;s Included</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             <div className="text-center">
-              <h3 className="font-sans text-base font-semibold text-foreground">
+              <h3 className="font-heading text-base font-semibold text-foreground">
                 Smoothie & Juice Bar
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">
@@ -115,7 +121,7 @@ export default function CateringPage() {
               </p>
             </div>
             <div className="text-center">
-              <h3 className="font-sans text-base font-semibold text-foreground">
+              <h3 className="font-heading text-base font-semibold text-foreground">
                 Plant-Based Platters
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">
@@ -124,7 +130,7 @@ export default function CateringPage() {
               </p>
             </div>
             <div className="text-center">
-              <h3 className="font-sans text-base font-semibold text-foreground">
+              <h3 className="font-heading text-base font-semibold text-foreground">
                 Setup & Delivery
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">
