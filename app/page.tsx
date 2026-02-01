@@ -134,24 +134,33 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero - Botanical Wreath Style with Real Food Photos */}
+      {/* Hero - Animated Doodle Wreath */}
       <section className="relative overflow-hidden bg-cream-white">
         <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col items-center justify-center px-4 py-20 sm:py-24">
-          {/* Photo Wreath - circular arrangement of real food with floating animation on mobile */}
-          {WREATH_PHOTOS.map((photo, i) => (
-            <div
-              key={i}
-              className={`absolute ${photo.position} ${photo.size} ${photo.animation} overflow-hidden rounded-full border-4 border-white shadow-lg`}
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                className="object-cover"
-                sizes="120px"
-              />
-            </div>
-          ))}
+          {/* Animated Doodle Wreath */}
+          {/* Top arc */}
+          <Carrot className="absolute left-[50%] top-[5%] h-14 w-14 -translate-x-1/2 rotate-[180deg] animate-bubble-1 sm:h-24 sm:w-24" />
+          <Beet className="absolute left-[20%] top-[8%] h-12 w-12 rotate-[-30deg] animate-bubble-2 sm:left-[30%] sm:h-20 sm:w-20" />
+          <Mushroom className="absolute right-[20%] top-[8%] h-12 w-12 rotate-[30deg] animate-bubble-3 sm:right-[30%] sm:h-20 sm:w-20" />
+          <Avocado className="absolute left-[5%] top-[15%] h-14 w-14 rotate-[-15deg] animate-bubble-4 sm:left-[15%] sm:h-24 sm:w-24" />
+          <Pineapple className="absolute right-[5%] top-[15%] h-14 w-14 rotate-[15deg] animate-bubble-1 sm:right-[15%] sm:h-24 sm:w-24" />
+
+          {/* Left side */}
+          <Banana className="absolute left-[2%] top-[30%] h-12 w-12 rotate-[-45deg] animate-bubble-2 sm:left-[5%] sm:h-20 sm:w-20" />
+          <Lemon className="absolute left-[2%] top-[50%] h-10 w-10 rotate-[-20deg] animate-bubble-3 sm:left-[3%] sm:h-16 sm:w-16" />
+          <Strawberry className="absolute left-[2%] top-[70%] h-12 w-12 rotate-[10deg] animate-bubble-4 sm:left-[5%] sm:h-20 sm:w-20" />
+
+          {/* Right side */}
+          <OrangeSlice className="absolute right-[2%] top-[30%] h-12 w-12 rotate-[45deg] animate-bubble-3 sm:right-[5%] sm:h-20 sm:w-20" />
+          <ChiliPepper className="absolute right-[2%] top-[50%] h-10 w-10 rotate-[20deg] animate-bubble-4 sm:right-[3%] sm:h-16 sm:w-16" />
+          <Mango className="absolute right-[2%] top-[70%] h-12 w-12 rotate-[-10deg] animate-bubble-1 sm:right-[5%] sm:h-20 sm:w-20" />
+
+          {/* Bottom arc */}
+          <Onion className="absolute bottom-[15%] left-[5%] h-12 w-12 rotate-[15deg] animate-bubble-2 sm:left-[15%] sm:h-20 sm:w-20" />
+          <Plum className="absolute bottom-[15%] right-[5%] h-12 w-12 rotate-[-15deg] animate-bubble-3 sm:right-[15%] sm:h-20 sm:w-20" />
+          <Smiley className="absolute bottom-[8%] left-[20%] h-10 w-10 rotate-[10deg] animate-bubble-4 sm:left-[30%] sm:h-16 sm:w-16" />
+          <Strawberry className="absolute bottom-[8%] right-[20%] h-10 w-10 rotate-[-10deg] animate-bubble-1 sm:right-[30%] sm:h-16 sm:w-16" />
+          <Avocado className="absolute bottom-[5%] left-[50%] h-12 w-12 -translate-x-1/2 animate-bubble-2 sm:h-20 sm:w-20" />
 
           {/* Center content - Brand */}
           <div className="relative z-10 text-center">

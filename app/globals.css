@@ -433,23 +433,21 @@
   animation: wiggle 4s ease-in-out infinite;
 }
 
-/* Floating bubble animations for mobile hero */
-@media (max-width: 768px) {
-  .animate-bubble-1 {
-    animation: float-bubble-1 4s ease-in-out infinite;
-  }
-  .animate-bubble-2 {
-    animation: float-bubble-2 5s ease-in-out infinite;
-    animation-delay: 0.5s;
-  }
-  .animate-bubble-3 {
-    animation: float-bubble-3 6s ease-in-out infinite;
-    animation-delay: 1s;
-  }
-  .animate-bubble-4 {
-    animation: float-bubble-4 4.5s ease-in-out infinite;
-    animation-delay: 0.3s;
-  }
+/* Floating bubble animations for doodles */
+.animate-bubble-1 {
+  animation: float-bubble-1 4s ease-in-out infinite;
+}
+.animate-bubble-2 {
+  animation: float-bubble-2 5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+.animate-bubble-3 {
+  animation: float-bubble-3 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.animate-bubble-4 {
+  animation: float-bubble-4 4.5s ease-in-out infinite;
+  animation-delay: 0.3s;
 }
 
 /* ============================================
