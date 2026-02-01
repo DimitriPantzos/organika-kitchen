@@ -9,7 +9,7 @@ export const contentType = "image/png"
 export default async function Image() {
   const [fontData, imageData] = await Promise.all([
     readFile(join(process.cwd(), "app/fonts/Poppins-ExtraBold.ttf")),
-    readFile(join(process.cwd(), "public/food/beet-arugula-toast.jpg")),
+    readFile(join(process.cwd(), "public/food/taco-bowl-radishes.jpg")),
   ])
 
   const imageBase64 = `data:image/jpeg;base64,${imageData.toString("base64")}`
