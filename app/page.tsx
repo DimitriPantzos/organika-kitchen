@@ -287,12 +287,17 @@ export default function HomePage() {
       {/* Menu Categories */}
       <MenuCategories />
 
-      {/* Quote Banner - Sage green for natural feel */}
-      <section className="relative overflow-hidden bg-sage-600 py-12">
-        <Carrot className="absolute -left-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[-15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
-        <Beet className="absolute -right-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
-        <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="font-script text-3xl text-white sm:text-4xl">
+      {/* Quote Banner with Doodle Pattern */}
+      <section className="relative overflow-hidden py-16 sm:py-20">
+        <Image
+          src="/doodle-pattern.png"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="relative z-10 mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
+          <p className="font-script text-3xl text-charcoal-600 sm:text-4xl">
             &ldquo;Don&rsquo;t panic, it&rsquo;s organic&rdquo;
           </p>
         </div>
