@@ -89,11 +89,22 @@ const FAQ_ITEMS = [
   },
 ]
 
-const HERO_PHOTOS = [
-  { src: "/food/taco-bowl-radishes.jpg", alt: "Taco bowl with fresh radish bunch and seasonal veggies" },
-  { src: "/food/beet-arugula-toast.jpg", alt: "Beet and arugula toast with pine nuts on whole grain" },
-  { src: "/food/avocado-toast.jpg", alt: "Avocado toast with arugula and pine nuts" },
-  { src: "/food/chickpea-veggie-soup.jpg", alt: "Chickpea vegetable soup with sweet potato and peas" },
+// Photos for the botanical wreath around the hero
+const WREATH_PHOTOS = [
+  { src: "/food/beet-arugula-toast.jpg", alt: "Beet toast", position: "left-[50%] top-[2%] -translate-x-1/2", size: "h-20 w-20 sm:h-28 sm:w-28" },
+  { src: "/food/taco-bowl-radishes.jpg", alt: "Taco bowl", position: "left-[25%] top-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
+  { src: "/food/avocado-toast.jpg", alt: "Avocado toast", position: "left-[75%] top-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
+  { src: "/food/acai-bowls-overhead.jpg", alt: "Acai bowls", position: "left-[10%] top-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
+  { src: "/food/plant-burger-fries.jpg", alt: "Plant burger", position: "right-[10%] top-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
+  { src: "/food/quinoa-bowl.jpg", alt: "Quinoa bowl", position: "left-[2%] top-[35%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
+  { src: "/food/smoothie-bowls-wood.jpg", alt: "Smoothie bowls", position: "right-[2%] top-[35%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
+  { src: "/food/collard-wrap.jpg", alt: "Collard wrap", position: "left-[2%] top-[55%]", size: "h-16 w-16 sm:h-20 sm:w-20" },
+  { src: "/food/juice-ingredients.jpg", alt: "Fresh juice", position: "right-[2%] top-[55%]", size: "h-16 w-16 sm:h-20 sm:w-20" },
+  { src: "/food/chickpea-veggie-soup.jpg", alt: "Veggie soup", position: "left-[10%] bottom-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
+  { src: "/food/cookies.jpg", alt: "Cookies", position: "right-[10%] bottom-[15%]", size: "h-16 w-16 sm:h-22 sm:w-22" },
+  { src: "/food/acai-bowls-group.jpg", alt: "Acai group", position: "left-[25%] bottom-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
+  { src: "/food/plant-burger.jpg", alt: "Plant burger close", position: "right-[25%] bottom-[5%]", size: "h-18 w-18 sm:h-24 sm:w-24" },
+  { src: "/food/taco-bowl.jpg", alt: "Taco bowl", position: "left-[50%] bottom-[2%] -translate-x-1/2", size: "h-20 w-20 sm:h-28 sm:w-28" },
 ]
 
 const FOOD_GALLERY = [
@@ -123,81 +134,72 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero - Botanical Wreath Style (like Le Botaniste) */}
-      <section className="relative overflow-hidden bg-white">
-        <div className="relative mx-auto flex min-h-[85vh] max-w-5xl flex-col items-center justify-center px-4 py-16 sm:py-20">
-          {/* Doodle Wreath - positioned in a circle around center */}
-          {/* Top arc */}
-          <Carrot className="absolute left-[50%] top-[5%] h-16 w-16 -translate-x-1/2 rotate-[180deg] sm:h-24 sm:w-24" />
-          <Beet className="absolute left-[30%] top-[8%] h-14 w-14 rotate-[-30deg] sm:h-20 sm:w-20" />
-          <Mushroom className="absolute left-[70%] top-[8%] h-14 w-14 rotate-[30deg] sm:h-20 sm:w-20" />
-          <Avocado className="absolute left-[15%] top-[15%] h-16 w-16 rotate-[-15deg] sm:h-24 sm:w-24" />
-          <Pineapple className="absolute left-[85%] top-[15%] h-16 w-16 rotate-[15deg] sm:h-24 sm:w-24" />
+      {/* Hero - Botanical Wreath Style with Real Food Photos */}
+      <section className="relative overflow-hidden bg-cream-white">
+        <div className="relative mx-auto flex min-h-[90vh] max-w-6xl flex-col items-center justify-center px-4 py-20 sm:py-24">
+          {/* Photo Wreath - circular arrangement of real food */}
+          {WREATH_PHOTOS.map((photo, i) => (
+            <div
+              key={i}
+              className={`absolute ${photo.position} ${photo.size} overflow-hidden rounded-full border-4 border-white shadow-lg`}
+            >
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover"
+                sizes="120px"
+              />
+            </div>
+          ))}
 
-          {/* Left side */}
-          <Banana className="absolute left-[5%] top-[30%] h-14 w-14 rotate-[-45deg] sm:h-20 sm:w-20" />
-          <Lemon className="absolute left-[3%] top-[50%] h-12 w-12 rotate-[-20deg] sm:h-18 sm:w-18" />
-          <Strawberry className="absolute left-[5%] top-[70%] h-14 w-14 rotate-[10deg] sm:h-20 sm:w-20" />
-
-          {/* Right side */}
-          <OrangeSlice className="absolute right-[5%] top-[30%] h-14 w-14 rotate-[45deg] sm:h-20 sm:w-20" />
-          <ChiliPepper className="absolute right-[3%] top-[50%] h-12 w-12 rotate-[20deg] sm:h-18 sm:w-18" />
-          <Mango className="absolute right-[5%] top-[70%] h-14 w-14 rotate-[-10deg] sm:h-20 sm:w-20" />
-
-          {/* Bottom arc */}
-          <Onion className="absolute bottom-[15%] left-[15%] h-14 w-14 rotate-[15deg] sm:h-20 sm:w-20" />
-          <Plum className="absolute bottom-[15%] right-[15%] h-14 w-14 rotate-[-15deg] sm:h-20 sm:w-20" />
-          <Smiley className="absolute bottom-[8%] left-[30%] h-12 w-12 rotate-[10deg] sm:h-16 sm:w-16" />
-          <Strawberry className="absolute bottom-[8%] right-[30%] h-12 w-12 rotate-[-10deg] sm:h-16 sm:w-16" />
-          <Avocado className="absolute bottom-[5%] left-[50%] h-14 w-14 -translate-x-1/2 sm:h-20 sm:w-20" />
-
-          {/* Center content - Brand card */}
-          <div className="relative z-10 rounded-lg border-2 border-sage-300 bg-cream-white/95 px-8 py-10 text-center shadow-sm backdrop-blur-sm sm:px-16 sm:py-14">
-            <p className="font-script text-xl text-sage-600 sm:text-2xl">
+          {/* Center content - Brand */}
+          <div className="relative z-10 text-center">
+            <p className="font-script text-2xl text-sage-600 sm:text-3xl">
               100% Organic
             </p>
 
-            <h1 className="mt-2 font-heading text-5xl font-extrabold tracking-tight text-charcoal-800 sm:text-6xl lg:text-7xl">
+            <h1 className="mt-3 font-heading text-6xl font-extrabold tracking-tight text-charcoal-800 sm:text-7xl lg:text-8xl">
               Organika
             </h1>
-            <h1 className="font-heading text-5xl font-extrabold tracking-tight text-sage-600 sm:text-6xl lg:text-7xl">
+            <h1 className="font-heading text-6xl font-extrabold tracking-tight text-sage-600 sm:text-7xl lg:text-8xl">
               Kitchen
             </h1>
 
-            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.25em] text-charcoal-400 sm:text-base">
+            <p className="mt-5 text-base font-semibold uppercase tracking-[0.3em] text-charcoal-400 sm:text-lg">
               Plant-Based Food
             </p>
-          </div>
 
-          {/* CTA buttons below the wreath */}
-          <div className="relative z-10 mt-10 flex flex-wrap justify-center gap-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-sage-600 text-lg font-bold uppercase tracking-wider text-white hover:bg-sage-500"
-            >
-              <Link href="/menu">View Menu</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-sage-400 text-lg font-bold uppercase tracking-wider text-sage-700 hover:bg-sage-50"
-            >
-              <a
-                href={LOCATION.orderUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+            {/* CTA buttons */}
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-sage-600 text-lg font-bold uppercase tracking-wider text-white hover:bg-sage-500"
               >
-                Order Online
-              </a>
-            </Button>
-          </div>
+                <Link href="/menu">View Menu</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-sage-400 text-lg font-bold uppercase tracking-wider text-sage-700 hover:bg-sage-50"
+              >
+                <a
+                  href={LOCATION.orderUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order Online
+                </a>
+              </Button>
+            </div>
 
-          {/* Location tagline */}
-          <p className="relative z-10 mt-6 text-sm text-charcoal-400">
-            Southport, CT &bull; Est. 2016
-          </p>
+            {/* Location tagline */}
+            <p className="mt-6 text-sm text-charcoal-400">
+              Southport, CT &bull; Est. 2016
+            </p>
+          </div>
         </div>
       </section>
 
