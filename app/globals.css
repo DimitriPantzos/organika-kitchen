@@ -372,6 +372,15 @@
   padding-bottom: 80px;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .section-padding {
     padding-top: 48px;

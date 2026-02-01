@@ -8,7 +8,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { LOCATION, BRAND } from "@/lib/locations"
 
 const NAV_ITEMS = [
-  { label: "Menu", href: "/order" },
+  { label: "Menu", href: "/menu" },
   { label: "Catering", href: "/catering" },
   { label: "Contact", href: "/contact" },
 ]

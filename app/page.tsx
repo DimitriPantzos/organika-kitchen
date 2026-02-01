@@ -151,7 +151,7 @@ export default function HomePage() {
               size="lg"
               className="bg-white text-lg font-bold uppercase tracking-wider text-garden-700 hover:bg-white/90"
             >
-              <Link href="/order">View Menu</Link>
+              <Link href="/menu">View Menu</Link>
             </Button>
             <Button
               asChild
