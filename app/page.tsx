@@ -23,7 +23,7 @@ const DIFFERENTIATORS = [
   },
   {
     icon: Sprout,
-    title: "Certified Organic",
+    title: "Locally Sourced",
     color: "bg-sunrise-500",
     description:
       "We source organic, locally-grown produce whenever possible. From our house-made dressings to our baked goods, quality is non-negotiable.",
