@@ -27,7 +27,7 @@ export default async function Image() {
           overflow: "hidden",
         }}
       >
-        {/* Colored background blobs */}
+        {/* Natural colored background blobs - terracotta, sage, earth */}
         <div
           style={{
             position: "absolute",
@@ -36,8 +36,8 @@ export default async function Image() {
             width: 300,
             height: 300,
             borderRadius: "50%",
-            backgroundColor: "#FCE4EC",
-            opacity: 0.7,
+            backgroundColor: "#F0C9B3",
+            opacity: 0.6,
           }}
         />
         <div
@@ -48,7 +48,7 @@ export default async function Image() {
             width: 280,
             height: 280,
             borderRadius: "50%",
-            backgroundColor: "#E8F5E9",
+            backgroundColor: "#C9D6C4",
             opacity: 0.7,
           }}
         />
@@ -60,7 +60,7 @@ export default async function Image() {
             width: 200,
             height: 200,
             borderRadius: "50%",
-            backgroundColor: "#FFF8E1",
+            backgroundColor: "#E4EBE1",
             opacity: 0.6,
           }}
         />
@@ -72,32 +72,32 @@ export default async function Image() {
             width: 220,
             height: 220,
             borderRadius: "50%",
-            backgroundColor: "#E3F2FD",
+            backgroundColor: "#F9E5D9",
             opacity: 0.5,
           }}
         />
 
-        {/* Food emoji doodles scattered around */}
+        {/* Veggie emoji doodles scattered around */}
         <span style={{ position: "absolute", top: 30, left: 40, fontSize: 56, transform: "rotate(-15deg)" }}>
-          🥑
+          🥬
         </span>
         <span style={{ position: "absolute", top: 40, right: 50, fontSize: 52, transform: "rotate(12deg)" }}>
-          🍓
+          🥑
         </span>
         <span style={{ position: "absolute", bottom: 35, left: 60, fontSize: 50, transform: "rotate(8deg)" }}>
-          🍋
-        </span>
-        <span style={{ position: "absolute", bottom: 30, right: 70, fontSize: 54, transform: "rotate(-10deg)" }}>
-          🍌
-        </span>
-        <span style={{ position: "absolute", top: 140, left: 50, fontSize: 40, transform: "rotate(20deg)" }}>
           🥕
         </span>
+        <span style={{ position: "absolute", bottom: 30, right: 70, fontSize: 54, transform: "rotate(-10deg)" }}>
+          🍅
+        </span>
+        <span style={{ position: "absolute", top: 140, left: 50, fontSize: 40, transform: "rotate(20deg)" }}>
+          🌽
+        </span>
         <span style={{ position: "absolute", top: 120, right: 40, fontSize: 42, transform: "rotate(-18deg)" }}>
-          🫐
+          🥒
         </span>
         <span style={{ position: "absolute", bottom: 130, left: 35, fontSize: 44, transform: "rotate(-5deg)" }}>
-          🍊
+          🍋
         </span>
         <span style={{ position: "absolute", bottom: 120, right: 45, fontSize: 40, transform: "rotate(15deg)" }}>
           🌿
@@ -109,7 +109,7 @@ export default async function Image() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#E91E63",
+            backgroundColor: "#C4643A",
             borderRadius: 50,
             padding: "8px 28px",
             marginBottom: 0,
@@ -153,7 +153,7 @@ export default async function Image() {
             margin: "0",
             textAlign: "center",
             letterSpacing: "-0.02em",
-            color: "#E91E63",
+            color: "#C4643A",
           }}
         >
           KITCHEN
@@ -173,7 +173,7 @@ export default async function Image() {
               display: "flex",
               alignItems: "center",
               gap: "8px",
-              backgroundColor: "#43A047",
+              backgroundColor: "#7C9473",
               borderRadius: 30,
               padding: "6px 18px",
             }}

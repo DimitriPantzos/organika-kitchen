@@ -57,13 +57,25 @@
   --sunrise-400: #FFA726;
   --sunrise-500: #FF8F00;
 
-  /* === BERRY - Pink/Magenta Accent === */
-  --berry-50: #FCE4EC;
-  --berry-100: #F8BBD0;
-  --berry-200: #F48FB1;
-  --berry-300: #F06292;
-  --berry-400: #EC407A;
-  --berry-500: #E91E63;
+  /* === TERRACOTTA - Warm Earthy Accent (mapped to berry classes) === */
+  --berry-50: #FDF5F0;
+  --berry-100: #F9E5D9;
+  --berry-200: #F0C9B3;
+  --berry-300: #E5A88A;
+  --berry-400: #D4855E;
+  --berry-500: #C4643A;
+
+  /* === SAGE - Natural Green Accent === */
+  --sage-50: #F3F6F2;
+  --sage-100: #E4EBE1;
+  --sage-200: #C9D6C4;
+  --sage-300: #B0C4A8;
+  --sage-400: #93AB8A;
+  --sage-500: #7C9473;
+  --sage-600: #637A5B;
+  --sage-700: #4E6149;
+  --sage-800: #3C4B38;
+  --sage-900: #2A3527;
 
   /* === SUNSHINE - Yellow Accent === */
   --sunshine-50: #FFFDE7;
@@ -127,7 +139,7 @@
   --shadow-lg: 0 10px 15px rgba(45, 41, 38, 0.06), 0 4px 6px rgba(45, 41, 38, 0.04);
   --shadow-xl: 0 20px 25px rgba(45, 41, 38, 0.08), 0 8px 10px rgba(45, 41, 38, 0.04);
   --shadow-card: 0 1px 3px rgba(45, 41, 38, 0.08), 0 1px 2px rgba(45, 41, 38, 0.06), 0 0 0 1px rgba(45, 41, 38, 0.04);
-  --shadow-card-hover: 0 8px 16px rgba(45, 41, 38, 0.08), 0 4px 8px rgba(45, 41, 38, 0.04), 0 0 0 1px rgba(233, 30, 99, 0.15);
+  --shadow-card-hover: 0 8px 16px rgba(45, 41, 38, 0.08), 0 4px 8px rgba(45, 41, 38, 0.04), 0 0 0 1px rgba(196, 100, 58, 0.15);
 
   /* === RADII === */
   --radius-sm: 6px;
@@ -271,6 +283,17 @@
   --color-charcoal-800: var(--charcoal-800);
   --color-charcoal-900: var(--charcoal-900);
 
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-sage-800: var(--sage-800);
+  --color-sage-900: var(--sage-900);
+
   --color-success: var(--success-base);
   --color-warning: var(--warning-base);
   --color-error: var(--error-base);
@@ -318,7 +341,7 @@
   }
 
   ::selection {
-    background: rgba(233, 30, 99, 0.15);
+    background: rgba(196, 100, 58, 0.15);
     color: var(--text-primary);
   }
 

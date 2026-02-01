@@ -1,16 +1,16 @@
 "use client"
 
 const TAGLINES = [
-  { text: "Because We Kale", color: "text-garden-500" },
-  { text: "Don't panic, it's organic", color: "text-berry-500" },
-  { text: "Eat More Veggies", color: "text-sunrise-500" },
-  { text: "Made with Love", color: "text-berry-400" },
-  { text: "Fresh", color: "text-garden-400" },
-  { text: "Organic", color: "text-earth-500" },
+  { text: "Because We Kale", color: "text-sage-400" },
+  { text: "Don't panic, it's organic", color: "text-berry-400" },
+  { text: "Eat More Veggies", color: "text-garden-400" },
+  { text: "Made with Love", color: "text-berry-300" },
+  { text: "Fresh", color: "text-sage-300" },
+  { text: "Organic", color: "text-earth-400" },
   { text: "Juicy", color: "text-sunrise-400" },
-  { text: "Plant Based", color: "text-garden-500" },
-  { text: "Vegan", color: "text-berry-500" },
-  { text: "Homemade", color: "text-earth-600" },
+  { text: "Plant Based", color: "text-garden-400" },
+  { text: "Vegan", color: "text-sage-400" },
+  { text: "Homemade", color: "text-earth-500" },
 ]
 
 export function TaglineMarquee() {

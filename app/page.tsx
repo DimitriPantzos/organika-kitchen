@@ -90,19 +90,19 @@ const FAQ_ITEMS = [
 ]
 
 const HERO_PHOTOS = [
-  { src: "/food/acai-bowls-overhead.jpg", alt: "Colorful acai bowls with fresh fruit toppings" },
-  { src: "/food/plant-burger.jpg", alt: "Plant-based burger with avocado and fresh veggies" },
+  { src: "/food/taco-bowl-radishes.jpg", alt: "Taco bowl with fresh radish bunch and seasonal veggies" },
+  { src: "/food/beet-arugula-toast.jpg", alt: "Beet and arugula toast with pine nuts on whole grain" },
   { src: "/food/avocado-toast.jpg", alt: "Avocado toast with arugula and pine nuts" },
-  { src: "/food/smoothie-bowls-wood.jpg", alt: "Smoothie bowls on rustic wood surface" },
+  { src: "/food/chickpea-veggie-soup.jpg", alt: "Chickpea vegetable soup with sweet potato and peas" },
 ]
 
 const FOOD_GALLERY = [
-  { src: "/food/acai-bowls-group.jpg", alt: "Assorted acai and smoothie bowls", span: "col-span-2 row-span-2" },
-  { src: "/food/taco-bowl.jpg", alt: "Fresh taco bowl with radishes and corn", span: "col-span-1 row-span-1" },
+  { src: "/food/taco-bowl-radishes.jpg", alt: "Taco bowl with fresh radish bunch", span: "col-span-2 row-span-2" },
+  { src: "/food/beet-arugula-toast.jpg", alt: "Beet and arugula toast on whole grain", span: "col-span-1 row-span-1" },
   { src: "/food/collard-wrap.jpg", alt: "Collard green wrap with colorful filling", span: "col-span-1 row-span-1" },
-  { src: "/food/quinoa-bowl.jpg", alt: "Quinoa protein bowl with roasted veggies", span: "col-span-1 row-span-2" },
-  { src: "/food/cookies.jpg", alt: "Fresh baked chocolate chip cookies", span: "col-span-1 row-span-1" },
-  { src: "/food/juice-ingredients.jpg", alt: "Fresh juice with beets, citrus and celery", span: "col-span-1 row-span-1" },
+  { src: "/food/juice-ingredients.jpg", alt: "Fresh juice with beets, citrus and celery", span: "col-span-1 row-span-2" },
+  { src: "/food/chickpea-veggie-soup.jpg", alt: "Chickpea soup loaded with sweet potato and veggies", span: "col-span-1 row-span-1" },
+  { src: "/food/plant-burger-fries.jpg", alt: "Plant burger with lettuce, tomato, and sweet potato fries", span: "col-span-1 row-span-1" },
 ]
 
 export default function HomePage() {
@@ -310,10 +310,10 @@ export default function HomePage() {
       {/* Menu Categories */}
       <MenuCategories />
 
-      {/* Quote Banner with Doodles - Berry instead of green */}
-      <section className="relative overflow-hidden bg-berry-500 py-12">
-        <Strawberry className="absolute -left-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[-15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
-        <Banana className="absolute -right-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
+      {/* Quote Banner - Sage green for natural feel */}
+      <section className="relative overflow-hidden bg-sage-600 py-12">
+        <Carrot className="absolute -left-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[-15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
+        <Beet className="absolute -right-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <p className="font-script text-3xl text-white sm:text-4xl">
             &ldquo;Don&rsquo;t panic, it&rsquo;s organic&rdquo;
