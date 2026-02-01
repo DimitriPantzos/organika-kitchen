@@ -1,10 +1,26 @@
 import Link from "next/link"
-import { Leaf, Sprout, Heart, Clock } from "lucide-react"
+import { Leaf, Heart, Clock, Sprout } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CTABanner } from "@/components/sections/CTABanner"
 import { TaglineMarquee } from "@/components/brand/TaglineMarquee"
 import { MenuCategories } from "@/components/brand/MenuCategories"
 import { LOCATION } from "@/lib/locations"
+import {
+  Avocado,
+  Lemon,
+  Carrot,
+  OrangeSlice,
+  Strawberry,
+  Banana,
+  Smiley,
+  Beet,
+  Pineapple,
+  Mushroom,
+  ChiliPepper,
+  Mango,
+  Onion,
+  Plum,
+} from "@/components/brand/Doodles"
 import {
   Accordion,
   AccordionContent,
@@ -26,7 +42,7 @@ const DIFFERENTIATORS = [
     title: "Locally Sourced",
     color: "bg-sunrise-500",
     description:
-      "We source organic, locally-grown produce whenever possible. From our house-made dressings to our baked goods, quality is non-negotiable.",
+      "We source all organic and organic-by-nature goods. From our house-made dressings to our baked goods, quality is non-negotiable.",
   },
   {
     icon: Heart,
@@ -90,15 +106,21 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero - Brand Presentation */}
+      {/* Hero - Brand Presentation with Doodles */}
       <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-garden-700">
-        {/* Subtle radial gradient for depth */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(102,187,106,0.15),transparent_70%)]" />
 
-        {/* Decorative accent circles */}
-        <div className="absolute left-[10%] top-[15%] h-32 w-32 rounded-full bg-garden-600/20 blur-xl sm:h-48 sm:w-48" />
-        <div className="absolute bottom-[20%] right-[8%] h-24 w-24 rounded-full bg-sunrise-500/10 blur-xl sm:h-36 sm:w-36" />
-        <div className="absolute bottom-[10%] left-[20%] h-20 w-20 rounded-full bg-berry-400/10 blur-xl sm:h-28 sm:w-28" />
+        {/* Floating Doodles */}
+        <Avocado className="absolute left-[3%] top-[12%] h-20 w-20 rotate-[-12deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
+        <Strawberry className="absolute right-[5%] top-[10%] h-16 w-16 rotate-[15deg] opacity-20 sm:h-24 sm:w-24 sm:opacity-25" />
+        <OrangeSlice className="absolute left-[8%] bottom-[18%] h-16 w-16 rotate-[20deg] opacity-15 sm:h-24 sm:w-24 sm:opacity-20" />
+        <Banana className="absolute right-[4%] bottom-[22%] h-20 w-20 rotate-[-8deg] opacity-15 sm:h-28 sm:w-28 sm:opacity-20" />
+        <Carrot className="absolute left-[18%] top-[6%] h-14 w-14 rotate-[25deg] opacity-15 sm:h-20 sm:w-20 sm:opacity-20" />
+        <Pineapple className="absolute right-[15%] bottom-[8%] h-16 w-16 rotate-[-18deg] opacity-15 sm:h-22 sm:w-22 sm:opacity-20" />
+        <Smiley className="absolute left-[6%] top-[55%] h-12 w-12 rotate-[8deg] opacity-15 sm:h-18 sm:w-18 sm:opacity-20" />
+        <Lemon className="absolute right-[10%] top-[40%] h-14 w-14 rotate-[-20deg] opacity-15 sm:h-20 sm:w-20 sm:opacity-20" />
+        <Beet className="absolute left-[22%] bottom-[6%] h-12 w-12 rotate-[10deg] opacity-10 sm:h-16 sm:w-16 sm:opacity-15" />
+        <ChiliPepper className="absolute right-[22%] top-[8%] h-12 w-12 rotate-[30deg] opacity-10 sm:h-16 sm:w-16 sm:opacity-15" />
 
         <div className="relative z-10 px-4 py-20 text-center sm:px-6">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-garden-200 sm:text-sm">
@@ -153,7 +175,11 @@ export default function HomePage() {
       <TaglineMarquee />
 
       {/* Because We Kale */}
-      <section className="section-padding bg-cream-elevated">
+      <section className="relative section-padding bg-cream-elevated overflow-hidden">
+        {/* Decorative doodles */}
+        <Beet className="absolute -left-4 top-8 h-24 w-24 rotate-[-15deg] opacity-[0.07] sm:h-32 sm:w-32" />
+        <Mango className="absolute -right-4 bottom-8 h-24 w-24 rotate-[12deg] opacity-[0.07] sm:h-32 sm:w-32" />
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="font-script text-2xl text-garden-600">
@@ -186,12 +212,28 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Doodle Divider Strip */}
+      <div className="flex items-center justify-center gap-6 overflow-hidden bg-cream-base py-6 sm:gap-10">
+        <Carrot className="h-10 w-10 rotate-[15deg] opacity-60 sm:h-14 sm:w-14" />
+        <OrangeSlice className="h-10 w-10 rotate-[-10deg] opacity-60 sm:h-14 sm:w-14" />
+        <Avocado className="h-10 w-10 rotate-[5deg] opacity-60 sm:h-14 sm:w-14" />
+        <Strawberry className="h-10 w-10 rotate-[-15deg] opacity-60 sm:h-14 sm:w-14" />
+        <Lemon className="hidden h-10 w-10 rotate-[20deg] opacity-60 sm:block sm:h-14 sm:w-14" />
+        <Smiley className="hidden h-10 w-10 rotate-[-8deg] opacity-60 sm:block sm:h-14 sm:w-14" />
+        <Banana className="hidden h-10 w-10 rotate-[12deg] opacity-60 md:block md:h-14 md:w-14" />
+        <Pineapple className="hidden h-10 w-10 rotate-[-5deg] opacity-60 md:block md:h-14 md:w-14" />
+        <Mushroom className="hidden h-10 w-10 rotate-[18deg] opacity-60 lg:block lg:h-14 lg:w-14" />
+        <ChiliPepper className="hidden h-10 w-10 rotate-[-12deg] opacity-60 lg:block lg:h-14 lg:w-14" />
+      </div>
+
       {/* Menu Categories */}
       <MenuCategories />
 
-      {/* Quote Banner */}
-      <section className="bg-garden-600 py-12">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+      {/* Quote Banner with Doodles */}
+      <section className="relative overflow-hidden bg-garden-600 py-12">
+        <Strawberry className="absolute -left-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[-15deg] opacity-15 sm:h-28 sm:w-28 sm:opacity-20" />
+        <Banana className="absolute -right-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[15deg] opacity-15 sm:h-28 sm:w-28 sm:opacity-20" />
+        <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <p className="font-script text-3xl text-white sm:text-4xl">
             &ldquo;Don&rsquo;t panic, it&rsquo;s organic&rdquo;
           </p>
@@ -199,7 +241,10 @@ export default function HomePage() {
       </section>
 
       {/* Location Info */}
-      <section className="section-padding">
+      <section className="relative section-padding overflow-hidden">
+        <Plum className="absolute -right-6 top-12 h-28 w-28 rotate-[10deg] opacity-[0.06]" />
+        <Onion className="absolute -left-6 bottom-12 h-28 w-28 rotate-[-10deg] opacity-[0.06]" />
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
