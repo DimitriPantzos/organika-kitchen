@@ -7,9 +7,12 @@ export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
 export default async function Image() {
-  const fontData = await readFile(
-    join(process.cwd(), "app/fonts/Poppins-ExtraBold.ttf")
-  )
+  const [fontData, imageData] = await Promise.all([
+    readFile(join(process.cwd(), "app/fonts/Poppins-ExtraBold.ttf")),
+    readFile(join(process.cwd(), "public/food/beet-arugula-toast.jpg")),
+  ])
+
+  const imageBase64 = `data:image/jpeg;base64,${imageData.toString("base64")}`
 
   return new ImageResponse(
     (
@@ -21,181 +24,118 @@ export default async function Image() {
           justifyContent: "center",
           width: "100%",
           height: "100%",
-          backgroundColor: "#F9F7F0",
           fontFamily: "Poppins",
           position: "relative",
-          overflow: "hidden",
         }}
       >
-        {/* Natural colored background blobs - terracotta, sage, earth */}
-        <div
+        {/* Background image */}
+        <img
+          src={imageBase64}
+          alt=""
           style={{
             position: "absolute",
-            top: -80,
-            left: -80,
-            width: 300,
-            height: 300,
-            borderRadius: "50%",
-            backgroundColor: "#F0C9B3",
-            opacity: 0.6,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: -60,
-            right: -60,
-            width: 280,
-            height: 280,
-            borderRadius: "50%",
-            backgroundColor: "#C9D6C4",
-            opacity: 0.7,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            top: -40,
-            right: 200,
-            width: 200,
-            height: 200,
-            borderRadius: "50%",
-            backgroundColor: "#E4EBE1",
-            opacity: 0.6,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: -30,
-            left: 180,
-            width: 220,
-            height: 220,
-            borderRadius: "50%",
-            backgroundColor: "#F9E5D9",
-            opacity: 0.5,
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
           }}
         />
 
-        {/* Veggie emoji doodles scattered around */}
-        <span style={{ position: "absolute", top: 30, left: 40, fontSize: 56, transform: "rotate(-15deg)" }}>
-          🥬
-        </span>
-        <span style={{ position: "absolute", top: 40, right: 50, fontSize: 52, transform: "rotate(12deg)" }}>
-          🥑
-        </span>
-        <span style={{ position: "absolute", bottom: 35, left: 60, fontSize: 50, transform: "rotate(8deg)" }}>
-          🥕
-        </span>
-        <span style={{ position: "absolute", bottom: 30, right: 70, fontSize: 54, transform: "rotate(-10deg)" }}>
-          🍅
-        </span>
-        <span style={{ position: "absolute", top: 140, left: 50, fontSize: 40, transform: "rotate(20deg)" }}>
-          🌽
-        </span>
-        <span style={{ position: "absolute", top: 120, right: 40, fontSize: 42, transform: "rotate(-18deg)" }}>
-          🥒
-        </span>
-        <span style={{ position: "absolute", bottom: 130, left: 35, fontSize: 44, transform: "rotate(-5deg)" }}>
-          🍋
-        </span>
-        <span style={{ position: "absolute", bottom: 120, right: 45, fontSize: 40, transform: "rotate(15deg)" }}>
-          🌿
-        </span>
+        {/* Dark overlay for text readability */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.45)",
+          }}
+        />
 
-        {/* Colored pill behind tagline */}
+        {/* Content */}
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#C4643A",
-            borderRadius: 50,
-            padding: "8px 28px",
-            marginBottom: 0,
+            position: "relative",
+            zIndex: 10,
           }}
         >
+          {/* Tagline pill */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "rgba(255, 255, 255, 0.15)",
+              borderRadius: 50,
+              padding: "10px 32px",
+              border: "2px solid rgba(255, 255, 255, 0.3)",
+            }}
+          >
+            <p
+              style={{
+                fontSize: 20,
+                fontWeight: 800,
+                letterSpacing: "0.25em",
+                textTransform: "uppercase",
+                color: "white",
+                margin: 0,
+              }}
+            >
+              100% Organic • Plant-Based
+            </p>
+          </div>
+
+          {/* Main title */}
+          <h1
+            style={{
+              fontSize: 140,
+              fontWeight: 800,
+              textTransform: "uppercase",
+              lineHeight: 0.9,
+              margin: "24px 0 0 0",
+              textAlign: "center",
+              letterSpacing: "-0.02em",
+              color: "white",
+              textShadow: "0 4px 20px rgba(0,0,0,0.3)",
+            }}
+          >
+            Organika
+          </h1>
+          <h1
+            style={{
+              fontSize: 140,
+              fontWeight: 800,
+              textTransform: "uppercase",
+              lineHeight: 0.9,
+              margin: "0",
+              textAlign: "center",
+              letterSpacing: "-0.02em",
+              color: "white",
+              textShadow: "0 4px 20px rgba(0,0,0,0.3)",
+            }}
+          >
+            Kitchen
+          </h1>
+
+          {/* Location */}
           <p
             style={{
-              fontSize: 18,
+              fontSize: 22,
               fontWeight: 800,
-              letterSpacing: "0.3em",
+              letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "white",
-              margin: 0,
+              color: "rgba(255, 255, 255, 0.8)",
+              marginTop: 28,
             }}
           >
-            Plant Based & Organic
+            Southport, CT
           </p>
-        </div>
-
-        {/* Main title */}
-        <h1
-          style={{
-            fontSize: 130,
-            fontWeight: 800,
-            textTransform: "uppercase",
-            lineHeight: 1,
-            margin: "16px 0 0 0",
-            textAlign: "center",
-            letterSpacing: "-0.02em",
-            color: "#2D2926",
-          }}
-        >
-          ORGANIKA
-        </h1>
-        <h1
-          style={{
-            fontSize: 130,
-            fontWeight: 800,
-            textTransform: "uppercase",
-            lineHeight: 1,
-            margin: "0",
-            textAlign: "center",
-            letterSpacing: "-0.02em",
-            color: "#C4643A",
-          }}
-        >
-          KITCHEN
-        </h1>
-
-        {/* Bottom info with colored dots */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "14px",
-            marginTop: 20,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "#7C9473",
-              borderRadius: 30,
-              padding: "6px 18px",
-            }}
-          >
-            <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "0.15em", textTransform: "uppercase", color: "white" }}>
-              Est. 2016
-            </span>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "#FF8F00",
-              borderRadius: 30,
-              padding: "6px 18px",
-            }}
-          >
-            <span style={{ fontSize: 16, fontWeight: 800, color: "white" }}>
-              Southport, CT
-            </span>
-          </div>
         </div>
       </div>
     ),
