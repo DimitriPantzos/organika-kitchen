@@ -223,7 +223,7 @@ export default function HomePage() {
                     {LOCATION.phoneFormatted}
                   </a>
                 </p>
-                <p>Mon&ndash;Sat 8:00 AM &ndash; 6:00 PM | Sun 8:00 AM &ndash; 5:00 PM</p>
+                <p>Mon&ndash;Sat 8:00 AM &ndash; 7:00 PM | Sun 8:00 AM &ndash; 5:00 PM</p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild className="bg-garden-600 hover:bg-garden-700">

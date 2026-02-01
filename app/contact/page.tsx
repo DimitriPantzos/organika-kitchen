@@ -53,7 +53,7 @@ export default function ContactPage() {
                 "Saturday",
               ],
               opens: "08:00",
-              closes: "18:00",
+              closes: "19:00",
             },
             {
               "@type": "OpeningHoursSpecification",

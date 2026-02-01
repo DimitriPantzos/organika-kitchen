@@ -38,7 +38,7 @@ export default function OrderPage() {
               {LOCATION.zip}
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Mon&ndash;Sat 8:00 AM &ndash; 6:00 PM | Sun 8:00 AM &ndash; 5:00 PM
+              Mon&ndash;Sat 8:00 AM &ndash; 7:00 PM | Sun 8:00 AM &ndash; 5:00 PM
             </p>
 
             <Button
