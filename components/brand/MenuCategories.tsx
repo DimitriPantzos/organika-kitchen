@@ -44,7 +44,7 @@ export function MenuCategories() {
         <div className="mt-8 text-center">
           <Link
             href="/menu"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-garden-600 hover:text-garden-700"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-berry-500 hover:text-berry-400"
           >
             View Full Menu & Order Online
             <span aria-hidden="true">&rarr;</span>

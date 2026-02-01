@@ -54,7 +54,7 @@ export function MenuNav({ categories }: MenuNavProps) {
               onClick={() => handleClick(category.slug)}
               className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors ${
                 activeSlug === category.slug
-                  ? "bg-garden-600 text-white"
+                  ? "bg-berry-500 text-white"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
               }`}
             >

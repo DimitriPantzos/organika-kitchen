@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Leaf, Heart, Clock, Sprout } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CTABanner } from "@/components/sections/CTABanner"
@@ -88,6 +89,22 @@ const FAQ_ITEMS = [
   },
 ]
 
+const HERO_PHOTOS = [
+  { src: "/food/acai-bowls-overhead.jpg", alt: "Colorful acai bowls with fresh fruit toppings" },
+  { src: "/food/plant-burger.jpg", alt: "Plant-based burger with avocado and fresh veggies" },
+  { src: "/food/avocado-toast.jpg", alt: "Avocado toast with arugula and pine nuts" },
+  { src: "/food/smoothie-bowls-wood.jpg", alt: "Smoothie bowls on rustic wood surface" },
+]
+
+const FOOD_GALLERY = [
+  { src: "/food/acai-bowls-group.jpg", alt: "Assorted acai and smoothie bowls", span: "col-span-2 row-span-2" },
+  { src: "/food/taco-bowl.jpg", alt: "Fresh taco bowl with radishes and corn", span: "col-span-1 row-span-1" },
+  { src: "/food/collard-wrap.jpg", alt: "Collard green wrap with colorful filling", span: "col-span-1 row-span-1" },
+  { src: "/food/quinoa-bowl.jpg", alt: "Quinoa protein bowl with roasted veggies", span: "col-span-1 row-span-2" },
+  { src: "/food/cookies.jpg", alt: "Fresh baked chocolate chip cookies", span: "col-span-1 row-span-1" },
+  { src: "/food/juice-ingredients.jpg", alt: "Fresh juice with beets, citrus and celery", span: "col-span-1 row-span-1" },
+]
+
 export default function HomePage() {
   return (
     <>
@@ -106,67 +123,98 @@ export default function HomePage() {
         }}
       />
 
-      {/* Hero - Brand Presentation with Doodles */}
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-garden-700">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(102,187,106,0.15),transparent_70%)]" />
+      {/* Hero - Warm, Photo-Forward with Doodle Character */}
+      <section className="relative overflow-hidden bg-cream-base">
+        {/* Scattered Doodles - high opacity, lots of personality */}
+        <Avocado className="absolute left-[2%] top-[8%] h-20 w-20 rotate-[-12deg] opacity-30 sm:h-28 sm:w-28 sm:opacity-40" />
+        <Strawberry className="absolute right-[3%] top-[5%] h-16 w-16 rotate-[15deg] opacity-30 sm:h-24 sm:w-24 sm:opacity-40" />
+        <Banana className="absolute left-[5%] bottom-[8%] h-18 w-18 rotate-[-8deg] opacity-25 sm:h-24 sm:w-24 sm:opacity-35" />
+        <Lemon className="absolute right-[8%] bottom-[15%] h-14 w-14 rotate-[-20deg] opacity-25 sm:h-20 sm:w-20 sm:opacity-35" />
+        <Smiley className="absolute left-[15%] bottom-[3%] h-12 w-12 rotate-[8deg] opacity-20 sm:h-16 sm:w-16 sm:opacity-30" />
+        <ChiliPepper className="absolute right-[18%] top-[3%] h-12 w-12 rotate-[30deg] opacity-20 sm:h-16 sm:w-16 sm:opacity-30" />
 
-        {/* Floating Doodles */}
-        <Avocado className="absolute left-[3%] top-[12%] h-20 w-20 rotate-[-12deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
-        <Strawberry className="absolute right-[5%] top-[10%] h-16 w-16 rotate-[15deg] opacity-20 sm:h-24 sm:w-24 sm:opacity-25" />
-        <OrangeSlice className="absolute left-[8%] bottom-[18%] h-16 w-16 rotate-[20deg] opacity-15 sm:h-24 sm:w-24 sm:opacity-20" />
-        <Banana className="absolute right-[4%] bottom-[22%] h-20 w-20 rotate-[-8deg] opacity-15 sm:h-28 sm:w-28 sm:opacity-20" />
-        <Carrot className="absolute left-[18%] top-[6%] h-14 w-14 rotate-[25deg] opacity-15 sm:h-20 sm:w-20 sm:opacity-20" />
-        <Pineapple className="absolute right-[15%] bottom-[8%] h-16 w-16 rotate-[-18deg] opacity-15 sm:h-22 sm:w-22 sm:opacity-20" />
-        <Smiley className="absolute left-[6%] top-[55%] h-12 w-12 rotate-[8deg] opacity-15 sm:h-18 sm:w-18 sm:opacity-20" />
-        <Lemon className="absolute right-[10%] top-[40%] h-14 w-14 rotate-[-20deg] opacity-15 sm:h-20 sm:w-20 sm:opacity-20" />
-        <Beet className="absolute left-[22%] bottom-[6%] h-12 w-12 rotate-[10deg] opacity-10 sm:h-16 sm:w-16 sm:opacity-15" />
-        <ChiliPepper className="absolute right-[22%] top-[8%] h-12 w-12 rotate-[30deg] opacity-10 sm:h-16 sm:w-16 sm:opacity-15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* Left - Typography */}
+            <div className="text-center lg:text-left">
+              <p className="font-script text-2xl text-berry-500 sm:text-3xl">
+                plant-based &amp; organic
+              </p>
 
-        <div className="relative z-10 px-4 py-20 text-center sm:px-6">
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-garden-200 sm:text-sm">
-            Plant Based &amp; Organic
-          </p>
+              <h1 className="mt-3 text-6xl font-extrabold uppercase leading-[0.9] tracking-tight text-charcoal-900 sm:text-7xl lg:text-8xl">
+                Organika
+                <br />
+                <span className="text-berry-500">Kitchen</span>
+              </h1>
 
-          <h1 className="mt-6 text-6xl font-extrabold uppercase leading-none tracking-tight text-white sm:text-7xl lg:text-9xl">
-            Organika
-            <br />
-            Kitchen
-          </h1>
+              <div className="mt-5 flex items-center justify-center gap-3 lg:justify-start">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal-400 sm:text-sm">
+                  Est. 2016
+                </span>
+                <span className="text-charcoal-300" aria-hidden="true">
+                  &#x2022;
+                </span>
+                <span className="font-script text-lg text-charcoal-500 sm:text-xl">
+                  Southport, CT
+                </span>
+              </div>
 
-          <div className="mt-6 flex items-center justify-center gap-3 sm:gap-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-garden-200 sm:text-sm">
-              Est. 2016
-            </span>
-            <span className="text-garden-400" aria-hidden="true">
-              &#x2022;
-            </span>
-            <span className="font-script text-lg text-garden-200 sm:text-xl">
-              Southport, CT
-            </span>
-          </div>
+              <p className="mx-auto mt-6 max-w-md text-lg text-charcoal-400 lg:mx-0">
+                Handcrafted smoothies, plant burgers, acai bowls, and grab-and-go meals.
+                Made with intention since 2016.
+              </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-lg font-bold uppercase tracking-wider text-garden-700 hover:bg-white/90"
-            >
-              <Link href="/menu">View Menu</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/30 bg-transparent text-lg font-bold uppercase tracking-wider text-white hover:bg-white/10 hover:text-white"
-            >
-              <a
-                href={LOCATION.orderUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Order Online
-              </a>
-            </Button>
+              <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-berry-500 text-lg font-bold uppercase tracking-wider text-white hover:bg-berry-400"
+                >
+                  <Link href="/menu">View Menu</Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-charcoal-300 text-lg font-bold uppercase tracking-wider text-charcoal-700 hover:bg-charcoal-50 hover:text-charcoal-900"
+                >
+                  <a
+                    href={LOCATION.orderUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Order Online
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right - Photo Collage */}
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                {HERO_PHOTOS.map((photo, i) => (
+                  <div
+                    key={photo.src}
+                    className={`relative overflow-hidden rounded-2xl shadow-lg ${
+                      i === 0 ? "aspect-square" : i === 1 ? "aspect-[3/4]" : i === 2 ? "aspect-[3/4]" : "aspect-square"
+                    } ${i % 2 === 0 ? "rotate-[-2deg]" : "rotate-[2deg]"}`}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 45vw, 25vw"
+                      priority={i < 2}
+                    />
+                  </div>
+                ))}
+              </div>
+              {/* Doodle accents on the photo grid */}
+              <Carrot className="absolute -left-6 -top-4 h-16 w-16 rotate-[25deg] opacity-60 sm:h-20 sm:w-20" />
+              <OrangeSlice className="absolute -bottom-4 -right-4 h-14 w-14 rotate-[-15deg] opacity-60 sm:h-18 sm:w-18" />
+              <Pineapple className="absolute -right-6 top-1/3 h-14 w-14 rotate-[10deg] opacity-50 sm:h-18 sm:w-18" />
+            </div>
           </div>
         </div>
       </section>
@@ -174,15 +222,62 @@ export default function HomePage() {
       {/* Scrolling Tagline Marquee */}
       <TaglineMarquee />
 
+      {/* Food Gallery - Bento Grid */}
+      <section className="section-padding bg-cream-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="font-script text-2xl text-berry-500">
+              Made fresh daily
+            </p>
+            <h2 className="mt-2 text-3xl sm:text-4xl">
+              Our Food Speaks for Itself
+            </h2>
+          </div>
+          <div className="relative mt-10 grid auto-rows-[180px] grid-cols-2 gap-3 sm:auto-rows-[220px] sm:gap-4 md:grid-cols-4">
+            {FOOD_GALLERY.map((photo) => (
+              <div
+                key={photo.src}
+                className={`${photo.span} relative overflow-hidden rounded-2xl shadow-md`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+            {/* Doodle overlay on gallery */}
+            <Mushroom className="absolute -right-3 -top-3 h-14 w-14 rotate-[18deg] opacity-50 sm:h-18 sm:w-18" />
+            <Beet className="absolute -bottom-3 -left-3 h-14 w-14 rotate-[-12deg] opacity-50 sm:h-18 sm:w-18" />
+          </div>
+        </div>
+      </section>
+
+      {/* Doodle Divider Strip */}
+      <div className="flex items-center justify-center gap-6 overflow-hidden bg-cream-elevated py-6 sm:gap-10">
+        <Carrot className="h-10 w-10 rotate-[15deg] opacity-60 sm:h-14 sm:w-14" />
+        <OrangeSlice className="h-10 w-10 rotate-[-10deg] opacity-60 sm:h-14 sm:w-14" />
+        <Avocado className="h-10 w-10 rotate-[5deg] opacity-60 sm:h-14 sm:w-14" />
+        <Strawberry className="h-10 w-10 rotate-[-15deg] opacity-60 sm:h-14 sm:w-14" />
+        <Lemon className="hidden h-10 w-10 rotate-[20deg] opacity-60 sm:block sm:h-14 sm:w-14" />
+        <Smiley className="hidden h-10 w-10 rotate-[-8deg] opacity-60 sm:block sm:h-14 sm:w-14" />
+        <Banana className="hidden h-10 w-10 rotate-[12deg] opacity-60 md:block md:h-14 md:w-14" />
+        <Pineapple className="hidden h-10 w-10 rotate-[-5deg] opacity-60 md:block md:h-14 md:w-14" />
+        <Mushroom className="hidden h-10 w-10 rotate-[18deg] opacity-60 lg:block lg:h-14 lg:w-14" />
+        <ChiliPepper className="hidden h-10 w-10 rotate-[-12deg] opacity-60 lg:block lg:h-14 lg:w-14" />
+      </div>
+
       {/* Because We Kale */}
-      <section className="relative section-padding bg-cream-elevated overflow-hidden">
+      <section className="relative section-padding bg-cream-base overflow-hidden">
         {/* Decorative doodles */}
         <Beet className="absolute -left-4 top-8 h-24 w-24 rotate-[-15deg] opacity-[0.07] sm:h-32 sm:w-32" />
         <Mango className="absolute -right-4 bottom-8 h-24 w-24 rotate-[12deg] opacity-[0.07] sm:h-32 sm:w-32" />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="font-script text-2xl text-garden-600">
+            <p className="font-script text-2xl text-berry-500">
               Because We Kale
             </p>
             <h2 className="mt-2 text-3xl sm:text-4xl">
@@ -212,27 +307,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Doodle Divider Strip */}
-      <div className="flex items-center justify-center gap-6 overflow-hidden bg-cream-base py-6 sm:gap-10">
-        <Carrot className="h-10 w-10 rotate-[15deg] opacity-60 sm:h-14 sm:w-14" />
-        <OrangeSlice className="h-10 w-10 rotate-[-10deg] opacity-60 sm:h-14 sm:w-14" />
-        <Avocado className="h-10 w-10 rotate-[5deg] opacity-60 sm:h-14 sm:w-14" />
-        <Strawberry className="h-10 w-10 rotate-[-15deg] opacity-60 sm:h-14 sm:w-14" />
-        <Lemon className="hidden h-10 w-10 rotate-[20deg] opacity-60 sm:block sm:h-14 sm:w-14" />
-        <Smiley className="hidden h-10 w-10 rotate-[-8deg] opacity-60 sm:block sm:h-14 sm:w-14" />
-        <Banana className="hidden h-10 w-10 rotate-[12deg] opacity-60 md:block md:h-14 md:w-14" />
-        <Pineapple className="hidden h-10 w-10 rotate-[-5deg] opacity-60 md:block md:h-14 md:w-14" />
-        <Mushroom className="hidden h-10 w-10 rotate-[18deg] opacity-60 lg:block lg:h-14 lg:w-14" />
-        <ChiliPepper className="hidden h-10 w-10 rotate-[-12deg] opacity-60 lg:block lg:h-14 lg:w-14" />
-      </div>
-
       {/* Menu Categories */}
       <MenuCategories />
 
-      {/* Quote Banner with Doodles */}
-      <section className="relative overflow-hidden bg-garden-600 py-12">
-        <Strawberry className="absolute -left-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[-15deg] opacity-15 sm:h-28 sm:w-28 sm:opacity-20" />
-        <Banana className="absolute -right-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[15deg] opacity-15 sm:h-28 sm:w-28 sm:opacity-20" />
+      {/* Quote Banner with Doodles - Berry instead of green */}
+      <section className="relative overflow-hidden bg-berry-500 py-12">
+        <Strawberry className="absolute -left-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[-15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
+        <Banana className="absolute -right-2 top-1/2 h-20 w-20 -translate-y-1/2 rotate-[15deg] opacity-20 sm:h-28 sm:w-28 sm:opacity-25" />
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <p className="font-script text-3xl text-white sm:text-4xl">
             &ldquo;Don&rsquo;t panic, it&rsquo;s organic&rdquo;
@@ -248,7 +329,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="font-script text-xl text-garden-600">Come visit</p>
+              <p className="font-script text-xl text-berry-500">Come visit</p>
               <h2 className="mt-1 text-3xl sm:text-4xl">Our Location</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Located on Post Road in Southport, we&apos;re your neighborhood
@@ -263,7 +344,7 @@ export default function HomePage() {
                 <p>
                   <a
                     href={`tel:${LOCATION.phone}`}
-                    className="font-semibold text-garden-600 hover:text-garden-700"
+                    className="font-semibold text-berry-500 hover:text-berry-400"
                   >
                     {LOCATION.phoneFormatted}
                   </a>
@@ -271,7 +352,7 @@ export default function HomePage() {
                 <p>Mon&ndash;Sat 8:00 AM &ndash; 7:00 PM | Sun 8:00 AM &ndash; 5:00 PM</p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button asChild className="bg-garden-600 hover:bg-garden-700">
+                <Button asChild className="bg-berry-500 hover:bg-berry-400">
                   <Link href="/order">Order for Pickup</Link>
                 </Button>
                 <Button asChild variant="outline">

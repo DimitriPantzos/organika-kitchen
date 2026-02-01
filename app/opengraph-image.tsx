@@ -21,7 +21,7 @@ export default async function Image() {
           justifyContent: "center",
           width: "100%",
           height: "100%",
-          backgroundColor: "#2E7D32",
+          backgroundColor: "#1A1715",
           color: "white",
           fontFamily: "Poppins",
         }}
@@ -32,7 +32,7 @@ export default async function Image() {
             fontWeight: 800,
             letterSpacing: "0.3em",
             textTransform: "uppercase",
-            color: "#A5D6A7",
+            color: "#F06292",
             marginBottom: 0,
           }}
         >
@@ -60,6 +60,7 @@ export default async function Image() {
             margin: "0",
             textAlign: "center",
             letterSpacing: "-0.02em",
+            color: "#E91E63",
           }}
         >
           KITCHEN
@@ -78,17 +79,17 @@ export default async function Image() {
               fontWeight: 800,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#A5D6A7",
+              color: "#B5AFA5",
             }}
           >
             Est. 2016
           </span>
-          <span style={{ color: "#66BB6A", fontSize: 24 }}>•</span>
+          <span style={{ color: "#E91E63", fontSize: 24 }}>•</span>
           <span
             style={{
               fontSize: 22,
               fontWeight: 800,
-              color: "#A5D6A7",
+              color: "#B5AFA5",
             }}
           >
             Southport, CT

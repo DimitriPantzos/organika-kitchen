@@ -89,17 +89,29 @@
   --chili-400: #EF5350;
   --chili-500: #E53935;
 
+  /* === CHARCOAL - Warm Dark Tones === */
+  --charcoal-50: #FAF9F7;
+  --charcoal-100: #F0EEEB;
+  --charcoal-200: #D9D5CF;
+  --charcoal-300: #B5AFA5;
+  --charcoal-400: #8C847A;
+  --charcoal-500: #6B6359;
+  --charcoal-600: #504A42;
+  --charcoal-700: #3A352F;
+  --charcoal-800: #2D2926;
+  --charcoal-900: #1A1715;
+
   /* === TEXT HIERARCHY === */
-  --text-primary: #1B3A1B;
-  --text-secondary: #4A6B4A;
-  --text-tertiary: #7A9A7A;
+  --text-primary: #2D2926;
+  --text-secondary: #504A42;
+  --text-tertiary: #8C847A;
   --text-inverse: #FEFDF8;
 
   /* === BORDERS & DIVIDERS === */
-  --border-subtle: rgba(27, 58, 27, 0.06);
-  --border-default: rgba(27, 58, 27, 0.1);
-  --border-strong: rgba(27, 58, 27, 0.15);
-  --border-focus: var(--garden-500);
+  --border-subtle: rgba(45, 41, 38, 0.06);
+  --border-default: rgba(45, 41, 38, 0.1);
+  --border-strong: rgba(45, 41, 38, 0.15);
+  --border-focus: var(--berry-500);
 
   /* === SEMANTIC COLORS === */
   --success-base: #2E7D32;
@@ -110,12 +122,12 @@
   --error-muted: rgba(229, 57, 53, 0.1);
 
   /* === SHADOWS === */
-  --shadow-sm: 0 1px 3px rgba(27, 58, 27, 0.06), 0 1px 2px rgba(27, 58, 27, 0.04);
-  --shadow-md: 0 4px 6px rgba(27, 58, 27, 0.05), 0 2px 4px rgba(27, 58, 27, 0.04);
-  --shadow-lg: 0 10px 15px rgba(27, 58, 27, 0.06), 0 4px 6px rgba(27, 58, 27, 0.04);
-  --shadow-xl: 0 20px 25px rgba(27, 58, 27, 0.08), 0 8px 10px rgba(27, 58, 27, 0.04);
-  --shadow-card: 0 1px 3px rgba(27, 58, 27, 0.08), 0 1px 2px rgba(27, 58, 27, 0.06), 0 0 0 1px rgba(27, 58, 27, 0.04);
-  --shadow-card-hover: 0 8px 16px rgba(27, 58, 27, 0.08), 0 4px 8px rgba(27, 58, 27, 0.04), 0 0 0 1px rgba(67, 160, 71, 0.15);
+  --shadow-sm: 0 1px 3px rgba(45, 41, 38, 0.06), 0 1px 2px rgba(45, 41, 38, 0.04);
+  --shadow-md: 0 4px 6px rgba(45, 41, 38, 0.05), 0 2px 4px rgba(45, 41, 38, 0.04);
+  --shadow-lg: 0 10px 15px rgba(45, 41, 38, 0.06), 0 4px 6px rgba(45, 41, 38, 0.04);
+  --shadow-xl: 0 20px 25px rgba(45, 41, 38, 0.08), 0 8px 10px rgba(45, 41, 38, 0.04);
+  --shadow-card: 0 1px 3px rgba(45, 41, 38, 0.08), 0 1px 2px rgba(45, 41, 38, 0.06), 0 0 0 1px rgba(45, 41, 38, 0.04);
+  --shadow-card-hover: 0 8px 16px rgba(45, 41, 38, 0.08), 0 4px 8px rgba(45, 41, 38, 0.04), 0 0 0 1px rgba(233, 30, 99, 0.15);
 
   /* === RADII === */
   --radius-sm: 6px;
@@ -137,7 +149,7 @@
   --card-foreground: var(--text-primary);
   --popover: var(--cream-float);
   --popover-foreground: var(--text-primary);
-  --primary: var(--garden-600);
+  --primary: var(--berry-500);
   --primary-foreground: var(--text-inverse);
   --secondary: var(--cream-elevated);
   --secondary-foreground: var(--text-primary);
@@ -149,7 +161,7 @@
   --destructive-foreground: var(--text-inverse);
   --border: var(--border-default);
   --input: var(--border-default);
-  --ring: var(--garden-500);
+  --ring: var(--berry-400);
   --radius: var(--radius-lg);
 
   --chart-1: var(--garden-500);
@@ -248,6 +260,17 @@
   --color-chili-400: var(--chili-400);
   --color-chili-500: var(--chili-500);
 
+  --color-charcoal-50: var(--charcoal-50);
+  --color-charcoal-100: var(--charcoal-100);
+  --color-charcoal-200: var(--charcoal-200);
+  --color-charcoal-300: var(--charcoal-300);
+  --color-charcoal-400: var(--charcoal-400);
+  --color-charcoal-500: var(--charcoal-500);
+  --color-charcoal-600: var(--charcoal-600);
+  --color-charcoal-700: var(--charcoal-700);
+  --color-charcoal-800: var(--charcoal-800);
+  --color-charcoal-900: var(--charcoal-900);
+
   --color-success: var(--success-base);
   --color-warning: var(--warning-base);
   --color-error: var(--error-base);
@@ -295,7 +318,7 @@
   }
 
   ::selection {
-    background: rgba(67, 160, 71, 0.15);
+    background: rgba(233, 30, 99, 0.15);
     color: var(--text-primary);
   }
 
@@ -350,6 +373,15 @@
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 4s ease-in-out infinite;
 }
 
 /* ============================================

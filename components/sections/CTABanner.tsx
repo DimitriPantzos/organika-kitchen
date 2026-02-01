@@ -18,13 +18,13 @@ export function CTABanner({
 }: CTABannerProps) {
   const bgClass =
     variant === "garden"
-      ? "bg-garden-800 text-white"
+      ? "bg-charcoal-800 text-white"
       : "bg-cream-elevated text-foreground"
 
   const btnClass =
     variant === "garden"
-      ? "bg-white text-garden-800 hover:bg-white/90"
-      : "bg-garden-600 text-white hover:bg-garden-700"
+      ? "bg-berry-500 text-white hover:bg-berry-400"
+      : "bg-berry-500 text-white hover:bg-berry-400"
 
   return (
     <section className={`${bgClass} section-padding`}>
@@ -32,7 +32,7 @@ export function CTABanner({
         <h2 className="text-3xl sm:text-4xl">{title}</h2>
         <p
           className={`mx-auto mt-4 max-w-xl text-lg ${
-            variant === "garden" ? "text-white/70" : "text-muted-foreground"
+            variant === "garden" ? "text-white/60" : "text-muted-foreground"
           }`}
         >
           {description}

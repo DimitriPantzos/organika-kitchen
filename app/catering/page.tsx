@@ -55,10 +55,10 @@ export default function CateringPage() {
       <BreadcrumbSchema items={[{ name: "Catering", href: "/catering" }]} />
 
       {/* Hero */}
-      <section className="bg-garden-700 py-16 sm:py-20">
+      <section className="bg-charcoal-800 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-garden-200">
+            <p className="text-sm font-semibold uppercase tracking-widest text-berry-300">
               Catering
             </p>
             <h1 className="mt-3 text-4xl text-white sm:text-5xl">
@@ -93,7 +93,7 @@ export default function CateringPage() {
                   <CardTitle className="font-heading text-lg font-semibold">
                     {pkg.name}
                   </CardTitle>
-                  <p className="text-sm font-medium text-garden-600">
+                  <p className="text-sm font-medium text-berry-500">
                     {pkg.capacity}
                   </p>
                 </CardHeader>

@@ -81,8 +81,8 @@ export default function MenuPage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-garden-700 py-16 sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(102,187,106,0.15),transparent_70%)]" />
+      <section className="relative overflow-hidden bg-charcoal-800 py-16 sm:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(233,30,99,0.08),transparent_70%)]" />
 
         {/* Decorative Doodles */}
         <Avocado className="absolute left-[3%] top-[10%] h-16 w-16 rotate-[-12deg] opacity-15 sm:h-24 sm:w-24 sm:opacity-20" />
@@ -91,7 +91,7 @@ export default function MenuPage() {
         <Banana className="absolute right-[4%] bottom-[15%] h-16 w-16 rotate-[-8deg] opacity-10 sm:h-24 sm:w-24 sm:opacity-15" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-widest text-garden-200">
+          <p className="text-sm font-semibold uppercase tracking-widest text-berry-300">
             100% Plant-Based &amp; Organic
           </p>
           <h1 className="mt-3 text-4xl text-white sm:text-5xl lg:text-6xl">
@@ -105,7 +105,7 @@ export default function MenuPage() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-lg font-bold uppercase tracking-wider text-garden-700 hover:bg-white/90"
+              className="bg-berry-500 text-lg font-bold uppercase tracking-wider text-white hover:bg-berry-400"
             >
               <a
                 href={LOCATION.orderUrl}
@@ -149,7 +149,7 @@ export default function MenuPage() {
                   {category.emoji}
                 </span>
                 <h2 className="mt-2 text-3xl sm:text-4xl">{category.name}</h2>
-                <p className="mt-2 font-script text-lg text-garden-600">
+                <p className="mt-2 font-script text-lg text-berry-500">
                   {category.tagline}
                 </p>
               </div>
@@ -164,7 +164,7 @@ export default function MenuPage() {
                       <h3 className="font-heading text-base font-semibold text-foreground">
                         {item.name}
                       </h3>
-                      <span className="shrink-0 font-heading text-base font-bold text-garden-600">
+                      <span className="shrink-0 font-heading text-base font-bold text-berry-500">
                         {formatPrice(item.price)}
                       </span>
                     </div>
@@ -182,9 +182,9 @@ export default function MenuPage() {
       </div>
 
       {/* Order CTA */}
-      <section className="bg-garden-800 section-padding">
+      <section className="bg-charcoal-800 section-padding">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="font-script text-2xl text-garden-200">
+          <p className="font-script text-2xl text-berry-300">
             Ready to eat?
           </p>
           <h2 className="mt-2 text-3xl text-white sm:text-4xl">
@@ -198,7 +198,7 @@ export default function MenuPage() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-lg font-bold text-garden-800 hover:bg-white/90"
+              className="bg-berry-500 text-lg font-bold text-white hover:bg-berry-400"
             >
               <a
                 href={LOCATION.orderUrl}
