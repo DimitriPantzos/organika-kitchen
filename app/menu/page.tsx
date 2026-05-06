@@ -173,9 +173,20 @@ export default function MenuPage() {
                         {item.description}
                       </p>
                     )}
+                    {item.priceNote && (
+                      <p className="mt-2 text-xs italic text-muted-foreground/70">
+                        {item.priceNote}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
+
+              {category.note && (
+                <p className="mt-6 text-center text-sm font-medium text-berry-600">
+                  {category.note}
+                </p>
+              )}
             </div>
           </section>
         ))}

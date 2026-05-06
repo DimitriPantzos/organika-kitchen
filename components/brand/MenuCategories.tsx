@@ -1,16 +1,21 @@
 import Link from "next/link"
 
 const CATEGORIES = [
-  { name: "Acai Bowls", emoji: "\uD83E\uDED0", bg: "bg-berry-500", slug: "organic-acai-bowls" },
-  { name: "Smoothies", emoji: "\uD83E\uDD64", bg: "bg-garden-500", slug: "organic-smoothies" },
-  { name: "Fresh Juices", emoji: "\uD83C\uDF4A", bg: "bg-sunrise-500", slug: "fresh-juices" },
-  { name: "Coffee Bar", emoji: "\u2615", bg: "bg-earth-500", slug: "organic-coffee-bar" },
   { name: "Breakfast", emoji: "\uD83E\uDD5E", bg: "bg-sunshine-500", slug: "organic-breakfast" },
+  { name: "Toast", emoji: "\uD83E\uDD51", bg: "bg-earth-400", slug: "organic-toast" },
   { name: "Salads", emoji: "\uD83E\uDD57", bg: "bg-garden-400", slug: "organic-salads" },
+  { name: "Healthy Bites", emoji: "\uD83E\uDD59", bg: "bg-sunshine-400", slug: "healthy-bites" },
+  { name: "Kids", emoji: "\uD83D\uDC76", bg: "bg-berry-300", slug: "kids" },
   { name: "Protein Bowls", emoji: "\uD83C\uDF5A", bg: "bg-ocean-500", slug: "organic-protein-bowls" },
   { name: "Sandwiches", emoji: "\uD83E\uDD6A", bg: "bg-chili-400", slug: "organic-sandwiches" },
   { name: "Pizza", emoji: "\uD83C\uDF55", bg: "bg-sunrise-400", slug: "organic-pizza" },
-  { name: "Gluten Free Pasta", emoji: "\uD83C\uDF5D", bg: "bg-berry-400", slug: "gluten-free-pasta" },
+  { name: "Pasta", emoji: "\uD83C\uDF5D", bg: "bg-berry-400", slug: "gluten-free-pasta" },
+  { name: "Acai Bowls", emoji: "\uD83E\uDED0", bg: "bg-berry-500", slug: "organic-acai-bowls" },
+  { name: "Smoothies", emoji: "\uD83E\uDD64", bg: "bg-garden-500", slug: "organic-smoothies" },
+  { name: "Smoothie Bombs", emoji: "\uD83D\uDCA5", bg: "bg-berry-600", slug: "organic-smoothie-bombs" },
+  { name: "Fresh Juices", emoji: "\uD83C\uDF4A", bg: "bg-sunrise-500", slug: "fresh-juices" },
+  { name: "Shots", emoji: "\uD83C\uDF3F", bg: "bg-garden-600", slug: "organic-shots" },
+  { name: "Coffee Bar", emoji: "\u2615", bg: "bg-earth-500", slug: "organic-coffee-bar" },
 ]
 
 export function MenuCategories() {
