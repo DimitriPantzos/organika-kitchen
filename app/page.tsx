@@ -6,6 +6,7 @@ import { CTABanner } from "@/components/sections/CTABanner"
 import { TaglineMarquee } from "@/components/brand/TaglineMarquee"
 import { MenuCategories } from "@/components/brand/MenuCategories"
 import { LOCATION } from "@/lib/locations"
+import { LocationMap } from "@/components/brand/LocationMap"
 import {
   Avocado,
   Lemon,
@@ -70,7 +71,7 @@ const FAQ_ITEMS = [
   {
     question: "Do you offer online ordering?",
     answer:
-      "Yes! You can order online through our website for pickup. Click 'Order Online' to place your order through Toast.",
+      "Yes! Order ahead through Toast and schedule a pickup time. Click 'Order Online' to place your scheduled order.",
   },
   {
     question: "Do you do catering?",
@@ -344,7 +345,7 @@ export default function HomePage() {
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild className="bg-berry-500 hover:bg-berry-400">
-                  <Link href="/order">Order for Pickup</Link>
+                  <Link href="/order">Schedule Pickup</Link>
                 </Button>
                 <Button asChild variant="outline">
                   <a
@@ -357,18 +358,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="overflow-hidden rounded-xl border border-border">
-              <iframe
-                src={LOCATION.mapEmbedUrl}
-                width="100%"
-                height="350"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Organika Kitchen map"
-              />
-            </div>
+            <LocationMap height={350} />
           </div>
         </div>
       </section>
@@ -406,8 +396,8 @@ export default function HomePage() {
       {/* Order CTA */}
       <CTABanner
         title="Ready to Order?"
-        description="Skip the wait. Order online for pickup and have your plant-based meal ready when you arrive."
-        buttonText="Order for Pickup"
+        description="Order ahead and schedule pickup for your plant-based meal. Toast is accepting scheduled orders."
+        buttonText="Schedule Pickup"
         buttonHref="/order"
         variant="earth"
       />

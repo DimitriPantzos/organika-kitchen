@@ -47,12 +47,12 @@ export function MenuNav({ categories }: MenuNavProps) {
   return (
     <nav className="sticky top-16 z-40 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="scrollbar-hide flex gap-1 overflow-x-auto py-3">
+        <div className="flex flex-wrap justify-center gap-1.5 py-3">
           {categories.map((category) => (
             <button
               key={category.slug}
               onClick={() => handleClick(category.slug)}
-              className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors ${
+              className={`rounded-full px-3 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                 activeSlug === category.slug
                   ? "bg-berry-500 text-white"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"

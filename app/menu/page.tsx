@@ -199,11 +199,11 @@ export default function MenuPage() {
             Ready to eat?
           </p>
           <h2 className="mt-2 text-3xl text-white sm:text-4xl">
-            Order Online for Pickup
+            Order Ahead for Pickup
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
-            Skip the wait. Order ahead through Toast and have your plant-based
-            meal ready when you arrive.
+            Order ahead through Toast and schedule a pickup time for your
+            plant-based meal.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button
@@ -216,7 +216,7 @@ export default function MenuPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Order Now
+                Order Ahead
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
