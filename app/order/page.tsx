@@ -5,9 +5,9 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema"
 import { LOCATION, BRAND } from "@/lib/locations"
 
 export const metadata: Metadata = {
-  title: "Order for Pickup",
+  title: "Schedule Pickup",
   description:
-    "Order online from Organika Kitchen in Southport, CT. Plant-based smoothies, bowls, burgers, baked goods, and grab-and-go meals. Order for pickup.",
+    "Order ahead from Organika Kitchen in Southport, CT. Schedule pickup for plant-based smoothies, bowls, burgers, baked goods, and grab-and-go meals.",
   alternates: {
     canonical: `${BRAND.url}/order`,
   },
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
 export default function OrderPage() {
   return (
     <>
-      <BreadcrumbSchema items={[{ name: "Order for Pickup", href: "/order" }]} />
+      <BreadcrumbSchema items={[{ name: "Schedule Pickup", href: "/order" }]} />
 
       <section className="bg-charcoal-800 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl text-white sm:text-5xl">Order for Pickup</h1>
+          <h1 className="text-4xl text-white sm:text-5xl">Schedule Pickup</h1>
           <p className="mt-4 max-w-xl text-lg text-white/70">
-            Skip the wait. Order ahead and have your plant-based meal ready when
-            you arrive.
+            Order ahead and schedule a pickup time for your plant-based meal.
+            Toast is accepting scheduled orders.
           </p>
         </div>
       </section>
@@ -51,13 +51,13 @@ export default function OrderPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Order Now
+                Order Ahead
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
 
             <p className="mt-4 text-xs text-muted-foreground">
-              You&apos;ll be redirected to our ordering platform
+              You&apos;ll be redirected to Toast to schedule your pickup
             </p>
           </div>
 

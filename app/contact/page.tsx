@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema"
 import { ContactForm } from "@/components/forms/ContactForm"
 import { LOCATION, SOCIAL, BRAND } from "@/lib/locations"
+import { LocationMap } from "@/components/brand/LocationMap"
 import { JsonLd } from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
@@ -133,19 +134,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* Map */}
-                  <div className="overflow-hidden rounded-lg border border-border">
-                    <iframe
-                      src={LOCATION.mapEmbedUrl}
-                      width="100%"
-                      height="200"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Organika Kitchen map"
-                    />
-                  </div>
+                  <LocationMap height={200} className="rounded-lg" />
                 </CardContent>
               </Card>
 
